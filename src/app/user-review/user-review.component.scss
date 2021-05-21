@@ -1,0 +1,12 @@
+.slider {
+    overflow: hidden;
+    padding-bottom: 64px;
+    box-shadow: inset 50px 0 30px -30px rgba(182, 171, 171, 0.2), inset -50px 0 30px -30px rgba(182, 171, 171, 0.2);
+    height: 225px;
+    cursor: pointer;
+    &-wrapper {
+        position: relative;
+        height: 225px;
+        width: 100%;
+    }
+}

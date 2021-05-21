@@ -1,0 +1,74 @@
+    // Logo and search styles
+    .logo {
+        min-width: 177px;
+        min-height: 18px;
+        margin-top: 5%;
+        margin-bottom: 5%;
+    }
+    
+    .key_icon {
+        color: #6A983C;
+        margin-left: 8px;
+    }
+    
+    .search-field {
+        max-width: 500px;
+        width: 100%;
+        height: 42px;
+        @media (max-width: 599px) {
+            min-height: 42px;
+            height: auto;
+        }
+        background: #F9F9F9;
+        border: 1px solid #D1D1D1;
+        box-sizing: border-box;
+        border-radius: 12px;
+        &__cat-button {
+            font-family: Poppins;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 15px;
+            line-height: 22px;
+            color: #151515;
+        }
+        &__categories {
+            font-family: 'Poppins';
+            font-style: normal;
+            font-weight: bold;
+            font-size: 15px;
+            line-height: 22px;
+            color: #151515;
+        }
+        &__verticalLine {
+            border: 1px solid #D1D1D1;
+            transform: rotate(90deg);
+            width: 18px;
+            height: 0px;
+            margin-right: 16px;
+        }
+        &__search-input {
+            font-family: 'Open Sans';
+            font-style: normal;
+            font-weight: normal;
+            font-size: 14px;
+            width: 262px;
+            border: none;
+            background-color: inherit;
+        }
+    }
+    
+    .icons {
+        margin-top: 5%;
+        margin-bottom: 5%;
+        & a {
+            color: black;
+        }
+    }
+    
+     ::ng-deep .icons__basket-icon .mat-badge-content {
+        background: #E5704B !important;
+    }
+    
+     ::ng-deep .search-field .mat-form-field-underline {
+        height: 0 !important;
+    }

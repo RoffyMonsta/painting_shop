@@ -1,0 +1,45 @@
+<div class="title">Leave a reply</div>
+<div class="sign-in">Allready have an account? <span class="sign-in under">Sign in</span> to leave a reply.</div>
+<form class="comment-form" [formGroup]="form" (ngSubmit)="submit($event)" fxLayout="column" fxLayoutAlign="space-between start" fxLayoutGap="16px">
+    <div class="comment-form__name-email" fxLayout="row" fxLayout.lt-sm="column" fxLayoutAlign="start start" fxLayoutGap="32px">
+        <div class="comment-form__name">
+            <span class="comment-form__input-title">Name</span>
+            <mat-form-field class="comment-form__input-form-field" appearance="outline">
+
+                <input matInput #name placeholder="Name" formControlName="name" required>
+                <mat-error *ngIf="this.form.get('name')?.invalid && this.form.get('name')?.touched">{{getNameErrorMessage()}}</mat-error>
+            </mat-form-field>
+        </div>
+        <div class="comment-form__email">
+            <span class="comment-form__input-title">Email</span>
+            <mat-form-field class="comment-form__input-form-field" appearance="outline">
+
+                <input matInput #email placeholder="Email address" formControlName="email" required>
+                <mat-error *ngIf="this.form.get('email')?.invalid && this.form.get('email')?.touched">{{getEmailErrorMessage()}}</mat-error>
+            </mat-form-field>
+        </div>
+    </div>
+
+    <div class="comment-form__checkbox" fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="10px">
+        <mat-checkbox formControlName="save"></mat-checkbox><span>Save my name and email in this browser for a next time comment.</span>
+    </div>
+
+    <div class="comment-form__comment">
+        <span class="comment-form__input-title">Comment</span>
+        <div class="comment-form__answer" *ngIf="(parentComment$ | async) != null" fxLayout="column" fxLayoutAlign="start center" fxLayoutGap="16px">
+            <div class="comment-form__answer-to" fxLayout="row" fxLayoutAlign="space-between center">
+                <span>You are replying to:</span>
+                <button class="comment-form__cancel-answer" (click)="cancelAnswer()" mat-button class="comment-form__cancel-button"><mat-icon class="comment-form__cancel-icon">cancel</mat-icon></button>
+            </div>
+            <div class="comment-form__answer-comment">
+                <app-reply [comment]="parentComment"></app-reply>
+            </div>
+        </div>
+
+        <mat-form-field class="comment-form__input-form-field" appearance="outline">
+            <input matInput #comment placeholder="Space for your comments" formControlName="comment">
+            <mat-error *ngIf="this.form.get('comment')?.invalid && this.form.get('comment')?.touched">{{getCommentErrorMessage()}}</mat-error>
+        </mat-form-field>
+    </div>
+    <button class="comment-form__button" mat-raised-button type="submit" [disabled]="form.invalid || form.pending">Send a comment</button>
+</form>

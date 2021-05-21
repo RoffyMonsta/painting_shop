@@ -1,0 +1,61 @@
+.painting {
+    border-bottom: 1px solid #F9F9F9;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    &__img {
+        max-width: 100px;
+        border-radius: 12px;
+    }
+    &__title {
+        font-family: 'Poppins';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 15px;
+        line-height: 22px;
+        color: #151515;
+    }
+    &__author {
+        font-family: 'Open Sans';
+        font-style: normal;
+        font-weight: normal;
+        font-size: 12px;
+        line-height: 16px;
+        color: #575757;
+    }
+    &__price {
+        font-family: Poppins;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 27px;
+        color: #6A983C;
+    }
+    &__pieces {
+        font-family: Open Sans;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 19px;
+        color: #D1D1D1;
+    }
+    &__action {
+        font-family: Open Sans;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 12px;
+        line-height: 16px;
+        color: #A9A9A9;
+    }
+    &__action-icon {
+        color: #151515;
+        &.red {
+            color: #E5704B;
+        }
+    }
+    &__star {
+        color: #FDBC15;
+        &.white {
+            color: #EBEBEB;
+        }
+    }
+}

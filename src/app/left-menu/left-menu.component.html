@@ -1,0 +1,13 @@
+<ng-container *ngIf="categories$ | async as categories; else loadingCarousel">
+    <div class="side-nav" fxLayout="column" fxLayoutAlign="start start">
+        <p class="side-nav__category">{{categories[val]?.title}}</p>
+        <mat-nav-list fxLayout="column" fxLayoutGap="12px">
+            <mat-list-item class="side-nav__list-item" *ngFor="let m of categories[val]?.navs| slice:0:5"> <button class="side-nav__list-button" (click)="onClick(m)">{{m}}</button></mat-list-item>
+        </mat-nav-list>
+        <button mat-button class="side-nav__nav-button" [routerLink]="['/list',this.categories[this.val]?.id]">{{categories[val]?.button}} <mat-icon>keyboard_arrow_right</mat-icon></button>
+    </div>
+
+</ng-container>
+<ng-template #loadingCarousel>
+    <mat-spinner></mat-spinner>
+</ng-template>

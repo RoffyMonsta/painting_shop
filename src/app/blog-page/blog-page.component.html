@@ -1,0 +1,84 @@
+<div class="page-wrapper">
+    <div class="wrapper">
+        <div class="current-route">
+            <span class="current-route__homepage">Homepage / Fruit and vegetables / </span><span class="current-route__category">Product title</span>
+        </div>
+        <div class="title-name" fxLayout="row" fxLayoutAlign="space-between center" fxLayout.lt-sm="column">
+            <div class="title-name__route-name">Fruit and vegetables</div>
+            <div class="title-name__views" fxLayout="row" fxLayoutAlign="space-between center">
+                <button mat-button class="title-name__grid" fxLayout=" row " fxLayoutAlign="space-between center " (click)="changeShow('grid')">
+                    <mat-icon class="title-name__grid-icon " [ngClass]="{'active':show ==='grid'}">grid_on</mat-icon>
+                    Grid view
+                </button>
+                <button mat-button class="title-name__list " fxLayout="row " fxLayoutAlign="space-between center " (click)="changeShow('list')">
+                    <mat-icon class="title-name__list-icon " [ngClass]="{'active':show ==='list'}">view_list</mat-icon>
+                    List view
+                </button>
+                <div class="title-name__product " fxLayout="row " fxLayoutAlign="space-between center ">
+                    <span class="title-name__count ">117</span> Products
+                </div>
+            </div>
+        </div>
+        <div class="blog-page " *ngIf="blogs$ | async as blogs; else loadingCarousel " fxLayout="column ">
+            <div class="blog-page__big-blogs " fxLayout="row " fxLayoutAlign="center center " fxLayout.lt-md="column " fxLayoutAlign.lt-md="space-between center " fxLayoutGap="32px ">
+                <app-blog-big [blog]="blogs[0] "></app-blog-big>
+                <app-blog-big [blog]="blogs[1] "></app-blog-big>
+            </div>
+            <div class="blog-page__filters-blogs " fxLayout="row " fxLayoutAlign="start start " fxLayout.lt-md="column " fxLayoutAlign.lt-md="space-between center " fxLayoutGap="32px ">
+                <div class="blog-page__filters " fxLayout="column " fxLayoutAlign="space-between start " fxLayoutGap="48px ">
+                    <div class="blog-page__filter-div ">
+                        <p class="blog-page__filter-title ">Archives</p>
+                        <mat-nav-list fxLayout="column " fxLayoutGap="12px ">
+                            <mat-list-item> <button class="blog-page__filter-list ">March 2020</button></mat-list-item>
+                            <mat-list-item> <button class="blog-page__filter-list ">February 2020</button></mat-list-item>
+                            <mat-list-item> <button class="blog-page__filter-list ">January 2020</button></mat-list-item>
+                            <mat-list-item> <button class="blog-page__filter-list ">November 2019</button></mat-list-item>
+                            <mat-list-item> <button class="blog-page__filter-list ">December 2019</button></mat-list-item>
+                        </mat-nav-list>
+                    </div>
+                    <div class="blog-page__filter-div ">
+                        <p class="blog-page__filter-title ">Category</p>
+                        <mat-nav-list fxLayout="column " fxLayoutGap="12px ">
+                            <mat-list-item> <button class="blog-page__filter-list grey ">Food</button></mat-list-item>
+                            <mat-list-item> <button class="blog-page__filter-list grey ">Chefs specialities</button></mat-list-item>
+                            <mat-list-item> <button class="blog-page__filter-list grey ">Vegetable</button></mat-list-item>
+                            <mat-list-item> <button class="blog-page__filter-list grey ">Meat</button></mat-list-item>
+                            <mat-list-item> <button class="blog-page__filter-list grey ">Recommendations</button></mat-list-item>
+                        </mat-nav-list>
+                    </div>
+                    <div class="blog-page__filter-div ">
+                        <p class="blog-page__filter-title ">Join our list</p>
+                        <span class="blog-page__join-desc ">
+                          Signup to be the first to hear about exclusive deals, special offers, recepies from our masters and others.
+                        </span>
+                        <div class="blog-page__input-div " fxLayout="row " fxLayoutAlign="space-around center ">
+                            <input type="text " class="blog-page__input " matInput placeholder="Your email address "> <button mat-button class="blog-page__subscribe ">Subscribe</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="blog-page__grid-blogs " fxLayout="row wrap " fxLayout.lt-md="column " fxLayoutAlign.lt-md="space-between center " fxLayoutAlign="start start " fxLayoutGap="32px " *ngIf="show === 'grid'">
+                    <div class="blog-page__grid-blog " *ngFor="let blog of blogs | slice:2 " fxFlex="29% " fxFlex.lt-lg="45% ">
+                        <app-blog-grid [blog]="blog "></app-blog-grid>
+                    </div>
+                </div>
+                <div class="blog-page__list-blogs " fxLayout="column" fxLayoutAlign="start start " fxLayoutAlign.lt-md="start center " fxLayoutGap="32px " *ngIf="show === 'list'">
+                    <div class="blog-page__list-blog " *ngFor="let blog of blogs | slice:2 ">
+                        <app-blog-listed [blog]="blog "></app-blog-listed>
+                    </div>
+                </div>
+            </div>
+            <div class="paginator " fxLayout="row " fxLayoutAlign="space-between center " fxLayout.lt-sm="column" fxLayoutGap.lt-sm="16px">
+                <div class="paginator__pages ">
+                    <span class="paginator__page ">Page: </span> <span class="paginator__selected-page ">1</span> 2 3 4
+                </div>
+                <button mat-button class="paginator__show-more ">Next page <mat-icon class="paginator__icon ">keyboard_arrow_right</mat-icon></button>
+                <div class="paginator__count ">
+                    <span class="paginator__counter ">198</span> Articles
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<ng-template #loadingCarousel>
+    <mat-spinner></mat-spinner>
+</ng-template>

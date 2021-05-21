@@ -1,0 +1,193 @@
+    .step {
+        width: 100%;
+        position: relative;
+        mat-form-field {
+            width: 100%;
+        }
+        &__title {
+            font-family: Poppins;
+            font-style: normal;
+            font-weight: 600;
+            font-size: 22px;
+            line-height: 33px;
+            color: #151515;
+            word-wrap: break-word;
+        }
+        &__input-title {
+            font-family: Poppins;
+            font-style: normal;
+            font-weight: 600;
+            font-size: 12px;
+            line-height: 18px;
+            color: #151515;
+        }
+        &__ additional rm-field {
+            width: 100%;
+        }
+        &__subtitle {
+            font-family: Open Sans;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 12px;
+            line-height: 16px;
+            color: #A9A9A9;
+            margin-bottom: 32px;
+        }
+        &__button {
+            background: #6A983C;
+            border: 2px solid #46760A;
+            box-sizing: border-box;
+            border-radius: 12px;
+            font-family: Poppins;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 15px;
+            line-height: 22px;
+            text-align: center;
+            color: #FFFFFF;
+            min-width: 218px;
+            min-height: 56px;
+            margin-top: 32px;
+        }
+        &__checkbox {
+            background: #F9F9F9;
+            /* C1/D */
+            border: 1px solid #D1D1D1;
+            box-sizing: border-box;
+            border-radius: 12px;
+            padding: 11px;
+            margin-top: 8px;
+            font-family: Open Sans;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 14px;
+            line-height: 19px;
+            margin-bottom: 8px;
+            color: #151515;
+        }
+        &__radio-button {
+            width: 100%;
+            background: #F9F9F9;
+            border: 1px solid #D1D1D1;
+            box-sizing: border-box;
+            border-radius: 12px;
+            padding: 10px;
+            margin-top: 8px;
+            margin-bottom: 8px;
+            font-family: Poppins;
+            font-style: normal;
+            font-weight: 600;
+            font-size: 12px;
+            line-height: 18px;
+            color: #151515;
+        }
+        &__radio-content {
+            width: 100%;
+        }
+        &__additional-price {
+            font-family: Poppins;
+            font-style: normal;
+            font-weight: 600;
+            font-size: 12px;
+            line-height: 18px;
+            color: #151515;
+        }
+        &__additional-green {
+            font-family: Poppins;
+            font-style: normal;
+            font-weight: 600;
+            font-size: 12px;
+            line-height: 18px;
+            color: #6A983C;
+        }
+        &__additional {
+            min-width: 100%;
+        }
+        &.additional {
+            min-height: 215px;
+        }
+        &__order-notes {
+            min-width: 100%;
+        }
+        &__order-notes-label {
+            font-family: Open Sans;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 14px;
+            line-height: 19px;
+            color: #A9A9A9;
+        }
+        &__credit-info {
+            padding-top: 35px;
+        }
+    }
+
+    //input styles
+     ::ng-deep .billing .mat-form-field-outline-start {
+        border-radius: 12px 0 0 12px !important;
+        min-width: 12px !important;
+        background: #F9F9F9 !important;
+    }
+
+     ::ng-deep .billing .mat-form-field-outline-gap {
+        background: #F9F9F9 !important;
+        min-width: 12px !important;
+    }
+
+     ::ng-deep .billing .mat-form-field-outline-end {
+        border-radius: 0 12px 12px 0 !important;
+        background: #F9F9F9 !important;
+        min-width: 12px !important;
+    }
+
+     ::ng-deep .billing .step__additional .mat-form-field-outline-start {
+        border-radius: 12px 0 0 12px !important;
+        background: #F9F9F9 !important;
+        min-width: 12px !important;
+        min-height: 112px !important;
+    }
+
+     ::ng-deep .billing .step__additional .mat-form-field-outline-gap {
+        background: #F9F9F9 !important;
+        min-height: 112px !important;
+        min-width: 12px !important;
+    }
+
+     ::ng-deep .billing .step__additional .mat-form-field-outline-end {
+        border-radius: 0 12px 12px 0 !important;
+        background: #F9F9F9 !important;
+        min-width: 12px !important;
+        min-height: 112px !important;
+    }
+
+    //radio-button
+     ::ng-deep .billing .mat-radio-checked {
+        .mat-radio-outer-circle {
+            background: #6A983C !important;
+            border-color: #6A983C !important;
+        }
+        .mat-radio-inner-circle {
+            background: #FFF !important;
+        }
+    }
+
+    .safe-data {
+        margin-top: 34px;
+        max-width: 213px;
+        &__safe-text {
+            font-family: Poppins;
+            font-style: normal;
+            font-weight: 600;
+            font-size: 12px;
+            line-height: 18px;
+            color: #151515;
+        }
+        &__subtext {
+            font-family: Open Sans;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 12px;
+            line-height: 16px;
+            color: #A9A9A9;
+        }
+    }

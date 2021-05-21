@@ -1,0 +1,83 @@
+<div class="page-wrapper">
+    <div class="wrapper">
+        <div class="current-route">
+            <span class="current-route__homepage">Homepage / </span><span class="category">{{(category$ | async)?.title }}</span>
+        </div>
+        <div class="title-name" fxLayout="row" fxLayoutAlign="space-between center" fxLayout.lt-sm="column">
+            <div class="title-name__route-name">{{(category$ | async)?.title }}</div>
+            <div class="title-name__views" fxLayout="row" fxLayoutAlign="space-between center">
+                <button mat-button class="title-name__grid" fxLayout="row" fxLayoutAlign="space-between center" (click)="changeShow('grid')">
+                    <mat-icon class="title-name__grid-icon" [ngClass]="{'active':show ==='grid'}">grid_on</mat-icon>
+                    Grid view
+                </button>
+                <button mat-button class="title-name__list" fxLayout="row" fxLayoutAlign="space-between center" (click)="changeShow('list')">
+                    <mat-icon class="title-name__list-icon" [ngClass]="{'active':show ==='list'}">view_list</mat-icon>
+                    List view
+                </button>
+                <div class="title-name__product" fxLayout="row" fxLayoutAlign="space-between center">
+                    <span class="title-name__count">117</span> Products
+                </div>
+            </div>
+        </div>
+        <div class="applied-filters" fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="16px" fxLayout.lt-md="column" fxLayoutAlign.lt-md="start center">
+            <mat-radio-group class="applied-filters__radio-group" fxLayout="row" fxLayoutAlign="space-around center">
+                <div>
+                    <mat-radio-button color="primary" value="1"></mat-radio-button><span class="applied-filters__radio-button-text">Filtre text</span></div>
+                <div>
+                    <mat-radio-button color="primary" value="2" checked></mat-radio-button><span class="applied-filters__radio-button-text">Filtre text</span></div>
+            </mat-radio-group>
+            <div class="applied-filters__checkbox" fxLayout="row" fxLayoutAlign="space-between center">
+                <mat-checkbox value=""></mat-checkbox><span class="applied-filters__checkbox-text">Filtre</span> <span class="applied-filters__nbm">Nbm</span>
+            </div>
+
+            <div class="applied-filters__checkbox" fxLayout="row" fxLayoutAlign="space-between center">
+                <mat-checkbox value=""></mat-checkbox><span class="applied-filters__checkbox-text">Filtre</span> <span class="applied-filters__nbm">Nbm</span>
+            </div>
+            <div class="applied-filters__checkbox select" fxLayout="row" fxLayoutAlign="space-around center">
+                <mat-checkbox value="" [checked]="myModel">
+                </mat-checkbox>
+                <div fxLayout="row" fxLayoutAlign="space-around center">
+                    <span class="applied-filters__checkbox-text">Filtre</span>
+                    <span class="applied-filters__nbm">Nbm</span>
+                    <div class="applied-filters__verticalLine">
+                    </div>
+                    <div class="applied-filters__checkbox-select-div">
+                        <mat-select placeholder="Select">
+                            <mat-option [value]="">1</mat-option>
+                            <mat-option [value]="">2</mat-option>
+                        </mat-select>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+        <div class="list-page" fxLayout="row" fxLayoutAlign="space-between start" fxLayout.lt-md="column" fxLayoutAlign.lt-md="space-between center" fxLayoutGap="32px">
+            <div class="filters" fxFlex="20%">
+                <app-filters></app-filters>
+            </div>
+            <div class="allpaintings" fxLayout="row wrap" fxLayoutAlign="center center" fxFlex *ngIf="show === 'grid'">
+                <div class="allpaintings__painting" *ngFor="let p of paintings$ | async" fxLayoutGap="10px">
+                    <app-painting [painting]="p"></app-painting>
+                </div>
+
+            </div>
+            <div class="allpaintings" fxLayout="column" fxLayoutAlign="center center" fxFlex *ngIf="show === 'list'">
+                <div class="allpaintings__painting" *ngFor="let p of paintings$ | async" fxLayoutGap="10px">
+                    <app-painting-listed [painting]="p"></app-painting-listed>
+                </div>
+
+            </div>
+        </div>
+        <div class="paginator" fxLayout="row" fxLayoutAlign="space-between center" fxLayout.lt-sm="column" fxLayoutGap.lt-sm="16px">
+            <div class="paginator__pages">
+                <span class="paginator__page">Page: </span>1 2 <span class="paginator__selected-page">3 </span>4
+            </div>
+            <button mat-button class="paginator__show-more">Show more products <mat-icon class="paginator__icon">keyboard_arrow_down</mat-icon></button>
+            <div class="paginator__count">
+                <span class="paginator__counter">336</span> Products
+            </div>
+        </div>
+    </div>
+
+</div>

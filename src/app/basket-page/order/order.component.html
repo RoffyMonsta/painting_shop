@@ -1,0 +1,33 @@
+<div class="order">
+    <p class="order__title">Order Summary</p>
+    <p class="order__subtitle">Price can change depending on shipping method and taxes of your state</p>
+    <div class="order__products">
+        <div class="order__painting" *ngFor="let painting of paintings$ | async">
+            <app-painting-basket [painting]="painting"></app-painting-basket>
+        </div>
+    </div>
+    <div class="price" fxLayout="row" fxLayoutAlign="space-between center">
+        <span class="price__title">Subtotal</span>
+        <span class="price__title"> {{cost}} USD</span>
+    </div>
+    <div class="price" fxLayout="row" fxLayoutAlign="space-between center">
+        <span class="price__title">Tax</span>
+        <span class="price__title">{{tax}}%  {{taxCost() | number: '1.00'}} USD</span>
+    </div>
+    <div class="price" fxLayout="row" fxLayoutAlign="space-between center">
+        <span class="price__title">Shipping</span>
+        <span class="price__title"> 0 USD</span>
+    </div>
+    <div class="price" fxLayout="row" fxLayoutAlign="space-between center">
+        <div class="price__delivery" fxLayout="column" fxLayoutAlign="start start">
+            <span class="price__title">Total Order</span>
+            <span class="price__guaranteed">Guaranteed delivery day: June 12, 2020</span>
+        </div>
+
+        <div class="price__finalprice">
+            {{cost + taxCost()}} USD
+        </div>
+    </div>
+
+
+</div>

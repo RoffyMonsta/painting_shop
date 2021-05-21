@@ -1,0 +1,22 @@
+<a (click)="navigatetoBlog()">
+    <div class="blog" fxLayout="column" fxLayoutAlign="space-between start" *ngIf="blog; else loadingCarousel">
+        <div class="blog__img-div">
+            <img src="{{blog.img}}" alt="blog image" class="blog__img">
+        </div>
+        <mat-chip-list>
+            <mat-chip class="blog__chip" fxLayoutAlign="center center">{{blog.category}}</mat-chip>
+        </mat-chip-list>
+        <div class="blog__content">
+            <div class="blog__title">
+                {{blog?.title}}
+            </div>
+            <div class="blog__user-data" fxLayout="row" fxLayoutGap="16px">
+                <span class="blog__author">{{blog.author}}</span>
+                <span class="blog__date">{{blog.date}}</span>
+            </div>
+        </div>
+    </div>
+</a>
+<ng-template #loadingCarousel>
+    <mat-spinner></mat-spinner>
+</ng-template>

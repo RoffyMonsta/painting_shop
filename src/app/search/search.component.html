@@ -1,0 +1,42 @@
+<div class="page-wrapper">
+    <div class="wrapper" fxLayout="row" fxLayoutAlign="space-between center" fxLayout.lt-md="column" fxLayoutGap.lt-md="30px">
+        <div class="logo">
+            <a routerLink="/"><img src="../assets/img/logo.png" alt="logo" class="logo"></a>
+        </div>
+
+        <div class="search-field" fxLayout="row" fxLayoutAlign="space-around center" fxLayout.lt-sm="column">
+            <div fxLayout="row" fxLayoutAlign="start center" fxLayout.lt-sm="column">
+                <button mat-button [matMenuTriggerFor]="menu" class="search-field__cat-button">All categories <mat-icon class="key_icon">keyboard_arrow_down</mat-icon></button>
+                <mat-menu class="search-field__categories" #menu="matMenu">
+                    <button mat-menu-item (click)="onClick(option)" *ngFor="let option of options">{{option}}</button>
+
+                </mat-menu>
+                <div class="search-field__verticalLine" *ngIf="!detectWindowSize(0,599)">
+                </div>
+                <div class="search-field__inputicon">
+                    <mat-form-field>
+                        <input matInput placeholder="Search Paintings, et cetera..." class="search-field__search-input" [(ngModel)]="searchInput">
+                    </mat-form-field>
+                </div>
+            </div>
+
+            <button mat-button (click)="onSearch()"><mat-icon>search</mat-icon></button>
+        </div>
+        <div class="icons" fxLayout="row" fxLayoutAlign="space-between center" fxLayoutGap="40px">
+            <div class="icons__user-icon">
+                <a href="#">
+                    <mat-icon>
+                        person
+                    </mat-icon>
+                </a>
+            </div>
+            <div class="icons__basket-icon" tooltip='You have {{basketPaintings$ | async  | lengthOfArray}} item(s): {{basketPaintings$ | async | listOfNames }}'>
+                <a routerLink='/basket'>
+                    <mat-icon [@matBadge]="lengthOfBasket$ | async" matBadge="{{basketPaintings$ | async | lengthOfArray}}" matBadgeColor="warn" matBadgePosition="below before" matBadgeSize="small">shopping_basket</mat-icon>
+                </a>
+            </div>
+
+
+        </div>
+    </div>
+</div>

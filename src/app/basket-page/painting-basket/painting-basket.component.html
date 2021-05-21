@@ -1,0 +1,35 @@
+<div class="painting" fxLayout="row" fxLayoutAlign="space-between start" *ngIf="painting;else loadingCarousel">
+    <div class="painting__img-remove" fxFlex=33% fxLayout="column" fxLayoutAlign="space-around start" fxLayoutGap="8px">
+        <img class="painting__img" src="{{painting.url}}" alt="painting_img">
+        <button mat-button class="painting__action" (click)="RemoveBasket()"><mat-icon inline="true" class="painting__action-icon red"> favorite_border</mat-icon> Wishlist </button>
+        <button mat-button class="painting__action" (click)="RemoveBasket()"><mat-icon inline="true" class="painting__action-icon red">dns</mat-icon> Compare </button>
+        <button mat-button class="painting__action remove" (click)="RemoveBasket()"><mat-icon inline="true" class="painting__action-icon">clear</mat-icon> Remove </button>
+    </div>
+
+    <div class="painting__content" fxFlex>
+        <div class="painting__header" fxLayout="column" fxLayoutAlign="start start">
+
+            <a [routerLink]="['/painting',painting.id]">
+                <p class="painting__title">{{painting.title}}</p>
+            </a>
+            <p class="painting__author">{{painting.author}}
+            </p>
+            <p class="painting__rank">
+                <span class="painting__rating" fxLayout="row">
+                <mat-icon class="painting__star">star</mat-icon>
+                <mat-icon class="painting__star">star</mat-icon>
+                <mat-icon class="painting__star">star</mat-icon>
+                <mat-icon class="painting__star">star</mat-icon>
+                <mat-icon class="painting__star white">star_border</mat-icon>
+              </span>
+            </p>
+        </div>
+        <div class="painting__price-pieces" fxLayout="row" fxLayoutAlign="space-between center">
+            <span class="painting__price">{{painting.price}} USD</span>
+            <span class="painting__pieces">{{painting.basketCount}} pcs</span>
+        </div>
+    </div>
+</div>
+<ng-template #loadingCarousel>
+    <mat-spinner></mat-spinner>
+</ng-template>

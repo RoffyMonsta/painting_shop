@@ -1,0 +1,55 @@
+<div class="painting">
+    <div class="painting__card" fxLayout="row" fxLayoutAlign="space-between start" fxLayout.lt-md="column" fxLayoutAlign.lt-md="space-between center">
+
+        <div class="painting__img-info" fxLayout="row" fxLayoutAlign="start center" fxFlex=66% fxLayout.lt-md="column" fxLayoutAlign.lt-md="start center">
+
+            <img class="painting__img" src="{{painting?.url}}" alt="painting_img">
+            <div class="painting__content" fxLayout="column" fxLayoutAlign="start start">
+                <span class="painting__title">{{painting?.title}}</span>
+                <span class="painting__author">{{painting?.author}}
+            </span>
+                <span class="painting__rating" fxLayout="row">
+              <mat-icon class="painting__star">star</mat-icon>
+              <mat-icon class="painting__star">star</mat-icon>
+              <mat-icon class="painting__star">star</mat-icon>
+              <mat-icon class="painting__star">star</mat-icon>
+              <mat-icon class="painting__star white">star_border</mat-icon>
+            </span>
+                <div class="painting__desc" fxLayout="column" fxLayoutAlign="space-between start" fxLayoutGap="12px">
+                    <div class="painting__desc-element " fxLayout="row " fxLayoutAlign="space-between start ">
+                        <span class="painting__desc-element-text ">Rank</span>
+                        <span class="painting__desc-element-text ">{{painting?.rank}}</span>
+                    </div>
+                    <div class="painting__desc-element " fxLayout="row " fxLayoutAlign="space-between start ">
+                        <span class="painting__desc-element-text ">Sales</span>
+                        <span class="painting__desc-element-text ">{{painting?.sales}}</span>
+                    </div>
+                    <div class="painting__desc-element " fxLayout="row " fxLayoutAlign="space-between start ">
+                        <span class="painting__desc-element-text ">Views</span>
+                        <span class="painting__desc-element-text ">{{painting?.views}}</span>
+                    </div>
+                    <div class="painting__desc-element " fxLayout="row " fxLayoutAlign="space-between start ">
+                        <span class="painting__desc-element-text ">Stock</span>
+                        <span class="painting__desc-element-text stock ">320 pcs</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="painting__purchase" fxLayout="column" fxLayoutAlign="space-around start" fxLayoutAlign.lt-md="space-between center">
+            <p class="painting__price ">{{painting?.price}} USD</p>
+            <div class="painting__shipping ">
+                <p class="painting__free ">Free shipping</p>
+                <p class="painting__delivery ">Delivery in 1 day</p>
+            </div>
+            <div fxLayout="column " fxLayoutAlign="space-between center" fxLayoutGap="12px">
+                <button mat-raised-button class="painting__button add " (click)="goToDetails() ">Product Detail <mat-icon class="mat-18 ">keyboard_arrow_right</mat-icon></button>
+                <button mat-raised-button class="painting__button add " (click)="AddBasket() " *ngIf="painting?.available ">Buy now</button>
+                <button mat-raised-button class="painting__button remove " (click)="RemoveBasket() " *ngIf="!painting?.available ">Cancel</button>
+            </div>
+        </div>
+
+    </div>
+
+</div>

@@ -1,0 +1,23 @@
+<a (click)="navigatetoBlog()">
+    <div class="blog" *ngIf="blog; else loadingCarousel" [ngStyle]="{
+    backgroundImage: 'linear-gradient(0deg, #000000 0%, rgba(0, 0, 0, 0) 100%), url('+blog.img+')',
+    borderRadius: '12px'
+    }" fxLayout="column" fxLayoutAlign="space-around start" fxLayoutGap="195px">
+        <mat-chip-list>
+            <mat-chip class="blog__chip" fxLayoutAlign="center center">{{blog.category}}</mat-chip>
+        </mat-chip-list>
+        <div class="blog__content">
+            <div class="blog__title">
+                {{blog.title}}
+            </div>
+            <div class="blog__user-data" fxLayout="row" fxLayoutGap="16px" fxLayoutAlign="start center">
+                <div class="blog__user"><img src="../../../../assets/img/user.png" alt="user"></div>
+                <span class="blog__author">{{blog.author}}</span>
+                <span class="blog__date">{{blog.date}}</span>
+            </div>
+        </div>
+    </div>
+</a>
+<ng-template #loadingCarousel>
+    <mat-spinner></mat-spinner>
+</ng-template>

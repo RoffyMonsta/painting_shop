@@ -1,0 +1,9 @@
+<div class="page-wrapper">
+    <div class="slider-wrapper">
+        <swiper class="slider" [config]='options' fxLayout="row" fxLayoutAlign="space-between center">
+            <ng-template *ngFor='let review of (reviews$ | async)' swiperSlide>
+                <app-review-card [review]="review"></app-review-card>
+            </ng-template>
+        </swiper>
+    </div>
+</div>

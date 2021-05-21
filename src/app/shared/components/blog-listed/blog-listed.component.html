@@ -1,0 +1,20 @@
+<a (click)="navigatetoBlog()">
+    <div class="blog" fxLayout="row" fxLayoutAlign="space-between center" fxLayoutGap="48px" *ngIf="blog; else loadingCarousel">
+        <div class="blog__content" fxLayout="column" fxLayoutAlign="start start" fxLayoutGap="16px">
+            <div class="blog__title">
+                {{blog.title}}
+            </div>
+            <div class="blog__user-data" fxLayout="row" fxLayoutGap="16px">
+                <span class="blog__author">{{blog.author}}</span>
+                <span class="blog__date">{{blog.date}}</span>
+            </div>
+        </div>
+        <div class="blog__img-div">
+            <img src="{{blog.img}}" alt="blog image" class="blog__img">
+        </div>
+
+    </div>
+</a>
+<ng-template #loadingCarousel>
+    <mat-spinner></mat-spinner>
+</ng-template>

@@ -1,0 +1,24 @@
+<ng-container *ngIf="comment">
+    <div class="comment" fxLayout="column" fxLayoutAlign="start start" fxLayoutGap="24px">
+        <div class="comment__info" fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="12px">
+            <div class="comment__img">
+                <img src="../../../assets/img/user.png" alt="user-img">
+            </div>
+            <div class="comment__meta" fxLayout="column">
+                <div class="comment__author-chip" fxLayout="row" fxLayoutAlign="start center">
+                    {{comment.name}}
+                    <mat-chip-list class="comment__chip-list">
+                        <mat-chip class="comment__chip">{{answer ? 'Customer' : 'Admin'}}</mat-chip>
+                    </mat-chip-list>
+                </div>
+                <div class="comment__date">
+                    {{comment.date}}
+                </div>
+            </div>
+        </div>
+
+        <div class="comment__text">
+            {{comment.comment}}
+        </div>
+    </div>
+</ng-container>

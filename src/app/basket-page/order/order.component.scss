@@ -1,0 +1,51 @@
+.order {
+    padding: 32px 16px;
+    background: #FFFFFF;
+    border: 1px solid #D1D1D1;
+    box-sizing: border-box;
+    border-radius: 12px;
+    &__title {
+        font-family: Poppins;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 22px;
+        line-height: 33px;
+        color: #151515;
+    }
+    &__subtitle {
+        font-family: Open Sans;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 12px;
+        line-height: 16px;
+        color: #A9A9A9;
+    }
+}
+
+.price {
+    &__title {
+        font-family: Poppins;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 12px;
+        line-height: 18px;
+        color: #151515;
+    }
+    &__guaranteed {
+        font-family: Open Sans;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 12px;
+        line-height: 16px;
+        color: #6A983C;
+    }
+    &__finalprice {
+        font-family: Poppins;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 26px;
+        line-height: 39px;
+        text-align: right;
+        color: #6A983C;
+    }
+}

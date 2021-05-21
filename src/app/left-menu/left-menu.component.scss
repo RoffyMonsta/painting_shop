@@ -1,0 +1,54 @@
+.side-nav {
+    &__category {
+        font-family: Poppins;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 27px;
+        color: #151515;
+    }
+    &__list-button {
+        font-family: Open Sans;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 14px;
+        text-decoration-line: underline;
+        color: #6A983C;
+        outline: none;
+        background: none;
+        border: none;
+    }
+    &__nav-button {
+        margin-top: 48px;
+        height: 48px;
+        left: 0px;
+        bottom: 0px;
+        background: #F5F5F5;
+        border-radius: 12px;
+        font-family: 'Poppins';
+        font-style: normal;
+        font-weight: bold;
+        font-size: 15px;
+        line-height: 22px;
+        color: #151515;
+    }
+}
+
+::ng-deep .mat-list-item-content {
+    padding: 0 !important;
+}
+
+::ng-deep .mat-list-item {
+    height: 19px !important;
+}
+
+@media screen and (max-width: '960px') {
+    .side-nav {
+        &__category {
+            margin-top: 40px;
+        }
+        &__nav-button {
+            margin-bottom: 20px;
+        }
+    }
+}

@@ -1,0 +1,63 @@
+<div class="page-wrapper">
+    <div class="wrapper">
+        <div class="paintings-block" fxLayout="row" fxLayoutAlign="space-between center" fxLayout.lt-md="column" fxLayoutGap="16px">
+            <app-left-menu [val]=0></app-left-menu>
+            <div class="paintings-block__recipes" *ngFor="let recipe of recipesArr">
+                <app-recipes [recipe]="recipe"></app-recipes>
+            </div>
+        </div>
+        <div class="paintings-block" fxLayout="row" fxLayoutAlign="space-between center" fxLayout.lt-md="column">
+            <app-left-menu fxFlex="25%" [val]=1></app-left-menu>
+            <div class="paintings-block__painting" *ngFor="let pSlice of paintingsSliceArray | slice:0:3" fxFlex="30%">
+                <app-painting *ngIf="pSlice; else loadingCarousel" [painting]="pSlice "></app-painting>
+            </div>
+        </div>
+        <hr>
+        <div class="paintings-block " fxLayout="row " fxLayoutAlign="space-between center " fxLayout.lt-md="column ">
+            <app-left-menu fxFlex="25% " [val]=2></app-left-menu>
+            <div class="paintings-block__painting " *ngFor="let p of mostPopular$ | async | slice:0:3 " fxFlex="30% ">
+                <app-painting [painting]="p "></app-painting>
+            </div>
+        </div>
+        <hr>
+        <div class="paintings-block " fxLayout="row " fxLayoutAlign="space-between center " fxLayout.lt-md="column ">
+            <app-left-menu fxFlex="25% " [val]=3></app-left-menu>
+            <div class="paintings-block__painting " *ngFor="let p of topRanked$ | async | slice:0:3 " fxFlex="30% ">
+                <app-painting [painting]="p "></app-painting>
+            </div>
+        </div>
+        <hr>
+        <div class="headline-text" fxLayout="row" fxLayoutAlign="space-between center">
+            <span class="headline-text__left-text">Our costumers say</span>
+            <button class="headline-text__read-more-button" mat-button>Button<mat-icon>keyboard_arrow_right</mat-icon></button>
+        </div>
+    </div>
+    <app-user-review></app-user-review>
+    <div class="wrapper">
+        <div class="headline-text" fxLayout="row" fxLayoutAlign="space-between center">
+            <span class="headline-text__left-text">Section headline</span>
+            <button class="headline-text__read-more-button" mat-button>Button<mat-icon>keyboard_arrow_right</mat-icon></button>
+        </div>
+        <div class="paintings-block" fxLayout="row" fxLayoutAlign="space-between center" fxLayout.lt-md="column">
+            <div class="paintings-block__painting " *ngFor="let p of mostPopular$ | async | slice:0:4 ">
+                <app-painting [painting]="p "></app-painting>
+            </div>
+        </div>
+        <div class="headline-text" fxLayout="row" fxLayoutAlign="space-between center">
+            <span class="headline-text__left-text">Read our blog posts</span>
+            <button class="headline-text__read-more-button" mat-button routerLink="/blog">Go to Blog<mat-icon>keyboard_arrow_right</mat-icon></button>
+        </div>
+        <div class="paintings-block" fxLayout="row" fxLayout.lt-md="column" fxLayoutAlign="space-between start" fxLayoutAlign.lt-md="space-between center" fxLayoutGap="31px" *ngIf="blogs$ | async as blogs; else loadingCarousel">
+            <app-blog-big fxFlex="35%" [blog]="blogs[0]"></app-blog-big>
+            <app-blog-grid fxFlex="20%" [blog]="blogs[1]"></app-blog-grid>
+            <div class="paintings-block__listed-blogs" fxLayout="column" fxLayoutAlign="space-between center" fxLayoutGap="32px" fxFlex>
+                <app-blog-listed [blog]="blogs[2]"></app-blog-listed>
+                <app-blog-listed [blog]="blogs[3]"></app-blog-listed>
+                <app-blog-listed [blog]="blogs[4]"></app-blog-listed>
+            </div>
+        </div>
+    </div>
+</div>
+<ng-template #loadingCarousel>
+    <mat-spinner></mat-spinner>
+</ng-template>

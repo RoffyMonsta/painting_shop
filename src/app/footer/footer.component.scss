@@ -1,0 +1,45 @@
+.footer {
+    padding-top: 64px;
+}
+
+.menu-field {
+    &__title {
+        font-family: Poppins;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 27px;
+        color: #151515;
+    }
+    &__element {
+        margin-top: 8px;
+        margin-bottom: 8px;
+        font-family: Open Sans;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 19px;
+        color: #6A983C;
+    }
+}
+
+.product-tag {
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 27px;
+    color: #151515;
+}
+
+.chip-list {
+    &__chip {
+        background: #F5F5F5;
+        font-family: Poppins;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 12px;
+        line-height: 18px;
+        color: #151515;
+    }
+}

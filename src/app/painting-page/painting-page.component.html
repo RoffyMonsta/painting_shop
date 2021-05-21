@@ -1,0 +1,174 @@
+<div class="page-wrapper" [@fadeIn]="paintingId$ | async" *ngIf="painting; else loadingCarousel">
+    <div class="wrapper">
+        <p class="page-route">
+            Homepage / Fruit and vegetables / <span class="page-route__selected-route">{{painting.title}}</span>
+        </p>
+        <div class="painting" fxLayout="row" fxLayoutAlign="space-around start" fxLayoutGap="32px" fxLayout.lt-lg="column" fxLayoutAlign.lt-lg="space-around center">
+            <div class="painting-image" fxFlex="50%">
+                <img class="painting-image__img" src="{{painting.url}}" alt="">
+            </div>
+            <div class="painting-content" fxFlex fxLayout="column" fxLayoutAlign="space-around start" fxLayoutAlign.lt-lg="space-around center">
+                <div class="painting-content__title">{{painting.title}}</div>
+                <div class="painting-content__rating" fxLayout="row" fxLayoutAlign="space-around center" *ngIf="reviewRating$ | async as rating">
+                    <mat-icon *ngFor=" let i of rating" class="painting-content__star">star</mat-icon>
+                    <mat-icon *ngFor=" let i of getEmpty(rating)" class="painting-content__star empty">star_border</mat-icon>
+                    <span class="painting-content__count-reviews">({{reviews$ | async | lengthOfArray}} customer review(s))</span>
+                </div>
+                <p class="painting-content__author">Made by {{painting.author}} in {{painting.year}}</p>
+                <div class="painting-content__about-columns" fxLayout="row" fxLayoutAlign="space-between center" fxLayoutGap="68px" fxLayout.lt-md="column" fxLayoutAlign.lt-md="space-between center">
+                    <div class="painting-content__about" fxLayout="row" fxLayoutAlign="space-between start" fxLayoutGap="38px">
+                        <div class="painting-content__column" fxLayout="column" fxLayoutAlign="space-between start" fxLayoutGap="12px">
+                            <span class="painting-content__about-title">SKU:</span>
+                            <span class="painting-content__about-title">Category:</span>
+                            <span class="painting-content__about-title">Stock:</span>
+                            <span class="painting-content__about-title">Farm:</span>
+                        </div>
+                        <div class="painting-content__column" fxLayout="column" fxLayoutAlign="space-between start" fxLayoutGap="12px">
+                            <span class="painting-content__about-text">76645</span>
+                            <span class="painting-content__about-text underline ">Vegetables</span>
+                            <span class="painting-content__about-text underline green">In stock</span>
+                            <span class="painting-content__about-text">Grocery Tarm Fields</span>
+                        </div>
+                    </div>
+                    <div class="painting-content__about" fxLayout="row" fxLayoutAlign="space-between start" fxLayoutGap="38px">
+                        <div class="painting-content__column" fxLayout="column" fxLayoutAlign="space-between start" fxLayoutGap="12px">
+                            <span class="painting-content__about-title">Freshness:</span>
+                            <span class="painting-content__about-title">Buy by:</span>
+                            <span class="painting-content__about-title">Delivery:</span>
+                            <span class="painting-content__about-title">Delivery area:</span>
+                        </div>
+                        <div class="painting-content__column" fxLayout="column" fxLayoutAlign="space-between start" fxLayoutGap="12px">
+                            <span class="painting-content__about-text">1 days old</span>
+                            <span class="painting-content__about-text">pcs, kgs, box, pack</span>
+                            <span class="painting-content__about-text">in 2 days</span>
+                            <span class="painting-content__about-text">Czech republic</span>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="painting-content__buy-card" fxLayout="column" fxLayoutAlign="space-around center">
+                    <div class="painting-content__buy-form" fxLayout="row" fxLayoutAlign="space-around center" fxLayout.lt-lg="column">
+                        <div class="painting-content__price">
+                            {{painting.price}} USD
+                            <span class="painting-content__discount">48.56 USD</span>
+                        </div>
+                        <form class="painting-content__form" fxLayout="row" fxLayoutAlign="space-around center">
+                            <mat-form-field class="painting-content__form-field">
+                                <input class="painting-content__input" type="number" min="1" matInput [formControl]="amountFormControl">
+                            </mat-form-field>
+                            <div class="painting-content__verticalLine"></div>
+                            <div class="painting-content__select-div">
+                                <mat-select placeholder="Pcs">
+                                    <mat-option [value]="">1</mat-option>
+                                    <mat-option [value]="">2</mat-option>
+                                </mat-select>
+                            </div>
+                        </form>
+                        <button mat-raised-button class="painting-content__button add " (click)="AddBasket() " *ngIf="painting.available ">+ Add to cart</button>
+                        <div class="painting-content__basket-buttons" fxLayout="column" *ngIf="!painting.available ">
+                            <button mat-raised-button class="painting-content__button add " (click)="ChangeAmountBasket() ">Change amount</button>
+                            <button mat-raised-button class="painting-content__button remove " (click)="RemoveBasket() ">Remove</button>
+                        </div>
+                    </div>
+                    <div class="painting-content__error-message" *ngIf="error">Amount of paintings is 1-10</div>
+                </div>
+                <div class="painting-content__action-buttons" fxLayout="row" fxLayoutAlign="start center" fxLayout.lt-sm="column" fxLayoutAlign.lt-sm="space-between center" fxLayoutGap="16px">
+                    <button mat-button class="painting-content__action"><mat-icon class="painting-content__action-icon">favorite_border</mat-icon>Add to my wish list</button>
+                    <button mat-button class="painting-content__action"><mat-icon class="painting-content__action-icon">dns</mat-icon>Compare</button>
+                </div>
+                <div class="painting-content__nav-bar " fxLayout="row " fxLayout.lt-md="column " fxLayoutAlign="space-around center ">
+                    <button [ngClass]="{ 'active': descriptionShow} " mat-button class="painting-content__nav-element " fxFlex="33% " (click)="switchActive(1) ">Description</button>
+                    <button [ngClass]="{ 'active': reviewsShow} " mat-button class="painting-content__nav-element " fxFlex="33% " (click)="switchActive(2) ">Reviews  <span class="painting-content__reviews-mat">{{reviews$ | async | lengthOfArray}}</span></button>
+                    <button [ngClass]="{ 'active': addShow} " mat-button class="painting-content__nav-element " fxFlex="33% " (click)="switchActive(3) ">Add a review</button>
+                </div>
+                <div class="painting-content__tab-section">
+                    <div class="painting-content__nav-content " fxLayout="row" fxLayoutAlign="center start" fxLayoutGap="20px" [@divSlider]="navselected">
+                        <div class="painting-content__tab">
+                            <div class="description">
+                                <p>Made by {{painting.author}} in {{painting.year}}</p>
+                                <div class="description__table " fxLayout="column " fxLayoutAlign="space-between start ">
+                                    <div class="description__table-title " fxLayout="row " fxLayoutAlign="space-between start ">
+                                        <span class="description__table-title-text ">Vitamins</span>
+                                        <span class="description__table-title-text ">Quantity</span>
+                                        <span class="description__table-title-text ">% DV</span>
+                                    </div>
+
+                                    <div class="description__table-rows "></div>
+                                    <div class="description__table-row " fxLayout="row " fxLayoutAlign="space-between center ">
+                                        <span class="description__table-row-text ">Vitamin A equiv.</span>
+                                        <span class="description__table-row-text ">735 μg</span>
+                                        <span class="description__table-row-text ">104 %</span>
+                                    </div>
+                                    <div class="description__table-row " fxLayout="row " fxLayoutAlign="space-between center ">
+                                        <span class="description__table-row-text ">Thiamine (B1)</span>
+                                        <span class="description__table-row-text ">0.066 mg</span>
+                                        <span class="description__table-row-text ">6 %</span>
+                                    </div>
+                                    <div class="description__table-row " fxLayout="row " fxLayoutAlign="space-between center ">
+                                        <span class="description__table-row-text ">Niacin (B3)</span>
+                                        <span class="description__table-row-text ">0.983 mg</span>
+                                        <span class="description__table-row-text ">7 %</span>
+                                    </div>
+                                    <div class="description__table-row " fxLayout="row " fxLayoutAlign="space-between center ">
+                                        <span class="description__table-row-text ">Folate (Bg)</span>
+                                        <span class="description__table-row-text ">19 μg</span>
+                                        <span class="description__table-row-text ">5 %</span>
+                                    </div>
+                                    <div class="description__table-row " fxLayout="row " fxLayoutAlign="space-between center ">
+                                        <span class="description__table-row-text ">Vitamin C</span>
+                                        <span class="description__table-row-text ">5.9 mg</span>
+                                        <span class="description__table-row-text ">7 %</span>
+                                    </div>
+                                    <div class="description__table-row " fxLayout="row " fxLayoutAlign="space-between center ">
+                                        <span class="description__table-row-text ">Vitamin E</span>
+                                        <span class="description__table-row-text ">0.66 mg</span>
+                                        <span class="description__table-row-text ">4 %</span>
+                                    </div>
+                                    <div class="description__table-row " fxLayout="row " fxLayoutAlign="space-between center ">
+                                        <span class="description__table-row-text ">Vitamin K</span>
+                                        <span class="description__table-row-text ">13.2</span>
+                                        <span class="description__table-row-text ">13 %</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="painting-content__tab">
+                            <div class="painting-content__reviews empty">
+                                <div *ngIf="(reviews$ | async | lengthOfArray)==0 ">
+                                    <p>Sorry, no reviews</p>
+                                </div>
+                                <div class="painting-content__reviews available " fxLayout="column " fxLayoutAlign="space-around center ">
+                                    <div class="painting-content__review " *ngFor="let r of reviewsToShow ">
+                                        <app-review-card [review]="r "></app-review-card>
+                                    </div>
+                                    <mat-paginator [length]="reviews$ | async | lengthOfArray" [pageSize]="reviewsOnPage" [pageSizeOptions]="[reviewsOnPage, 2*reviewsOnPage, 3*reviewsOnPage, reviews$ | async | lengthOfArray]" (page)=" pageEvent=$event; onPageChange($event) ">
+                                    </mat-paginator>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class=" painting-content__tab ">
+                            <div class="painting-content__review-form ">
+                                <app-review-form [productId]="painting.id "></app-review-form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="headline-text " fxLayout="row " fxLayoutAlign="space-between center ">
+            <span class="headline-text__left-text ">Related products</span>
+            <button class="headline-text__read-more-button " mat-button>More products<mat-icon>keyboard_arrow_right</mat-icon></button>
+        </div>
+        <div class="paintings-block " fxLayout="row " fxLayoutAlign="space-between center " fxLayout.lt-md="column ">
+            <div class="paintings-block__painting " *ngFor="let p of mostPopular$ | async | slice:0:4 ">
+                <app-painting [painting]="p "></app-painting>
+            </div>
+        </div>
+    </div>
+</div>
+<ng-template #loadingCarousel>
+    <mat-spinner></mat-spinner>
+</ng-template>

@@ -1,0 +1,32 @@
+<mat-card class="painting" *ngIf="painting; else loadingCarousel">
+    <div class="painting__img-div" fxLayout="column" fxLayoutAlign="center center">
+        <img class="painting__img" src="{{painting.url}}" alt="painting_img">
+    </div>
+
+    <span matBadge="{{painting.year}}" matBadgePosition="above before" matBadgeSize="medium"></span>
+    <mat-card-header fxLayout="column">
+
+        <mat-card-title class="painting__title" tooltip='Cost is: {{painting.price}} $'>{{painting.title}}</mat-card-title>
+        <mat-card-subtitle class="painting__author">{{painting?.author}}</mat-card-subtitle>
+        <span class="painting__rating" fxLayout="row">
+          <mat-icon class="painting__star">star</mat-icon>
+          <mat-icon class="painting__star">star</mat-icon>
+          <mat-icon class="painting__star">star</mat-icon>
+          <mat-icon class="painting__star">star</mat-icon>
+          <mat-icon class="painting__star white">star_border</mat-icon>
+        </span>
+    </mat-card-header>
+    <mat-card-content>
+        <div class="painting__price-button" fxLayout="row" fxLayoutAlign="space-between center" fxLayoutGap="16px">
+            <div class="painting__price-views" fxLayout="column" fxLayoutAlign="center">
+                <p class="painting__price">{{painting.price}} USD</p>
+            </div>
+            <button mat-raised-button class="painting__button add" (click)="navigatetoPainting()">Buy now</button>
+
+        </div>
+    </mat-card-content>
+
+</mat-card>
+<ng-template #loadingCarousel>
+    <mat-spinner></mat-spinner>
+</ng-template>

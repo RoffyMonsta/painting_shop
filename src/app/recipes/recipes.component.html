@@ -1,0 +1,11 @@
+<div class="recipe" [ngStyle]="{
+background: 'linear-gradient( rgba(255, 255, 255, 0.6), rgba(0, 0, 0, 0.8) ), url('+recipe?.img+') center center no-repeat',
+borderRadius: '12px'
+}" fxLayout="column" fxLayoutAlign="space-around start">
+    <div class="recipe__text-content">
+        <p class="recipe__banner">Banner subfocus</p>
+        <span class="recipe__heading">{{recipe?.heading}}</span>
+    </div>
+
+    <button mat-raised-button class="recipe__button" fxLayout="row" fxLayoutAlign="center center"> Read recipes <mat-icon class="recipe__icon">keyboard_arrow_right</mat-icon></button>
+</div>

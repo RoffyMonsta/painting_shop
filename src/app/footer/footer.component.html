@@ -1,0 +1,46 @@
+<div class="page-wrapper">
+    <div class="wrapper">
+        <div class="footer">
+            <div class="menu-field" fxLayout="row" fxLayoutAlign="space-between start" fxLayout.lt-md="column" fxLayoutAlign.lt-md="space-between center" fxLayoutGap.lt-md="16px">
+                <div class="menu-field__column" fxLayout="column" fxLayoutAlign="space-between start" fxLayoutAlign.lt-md="space-between center">
+                    <p class="menu-field__title">Get in touch</p>
+                    <p class="menu-field__element">About Us</p>
+                    <p class="menu-field__element">Careers</p>
+                    <p class="menu-field__element">Press releases</p>
+                    <p class="menu-field__element">Blog</p>
+                </div>
+                <div class="menu-field__column" fxLayout="column" fxLayoutAlign="space-between start" fxLayoutAlign.lt-md="space-between center">
+                    <p class="menu-field__title">Connections</p>
+                    <p class="menu-field__element">Facebook</p>
+                    <p class="menu-field__element">Twitter</p>
+                    <p class="menu-field__element">Instagram</p>
+                    <p class="menu-field__element">Youtube</p>
+                    <p class="menu-field__element">LinkedIn</p>
+                </div>
+                <div class="menu-field__column" fxLayout="column" fxLayoutAlign="space-between start" fxLayoutAlign.lt-md="space-between center">
+                    <p class="menu-field__title">Earnings</p>
+                    <p class="menu-field__element">Become an Affliate</p>
+                    <p class="menu-field__element">Advertise your product</p>
+                    <p class="menu-field__element">Sell on Market</p>
+                </div>
+                <div class="menu-field__column" fxLayout="column" fxLayoutAlign="space-between start" fxLayoutAlign.lt-md="space-between center">
+                    <p class="menu-field__title">Account</p>
+                    <p class="menu-field__element">Your account</p>
+                    <p class="menu-field__element">Returns Centre</p>
+                    <p class="menu-field__element">100% purchase protection</p>
+                    <p class="menu-field__element">Chat with us</p>
+                    <p class="menu-field__element">Help</p>
+                </div>
+            </div>
+
+            <p class="product-tag">Product tags</p>
+            <mat-chip-list class="chip-list">
+                <mat-chip class="chip-list__chip" *ngFor="let product of products" [ngStyle]="{'margin': '7px'}">
+                    {{product.name}}
+                </mat-chip>
+            </mat-chip-list>
+            <app-copyright></app-copyright>
+        </div>
+
+    </div>
+</div>

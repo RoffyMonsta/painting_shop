@@ -1,0 +1,26 @@
+.blog {
+    cursor: pointer;
+    word-wrap: break-word;
+    &__img {
+        max-width: 96px;
+        min-height: 96px;
+        border-radius: 12px;
+    }
+    &__title {
+        font-family: Poppins;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 15px;
+        line-height: 22px;
+        color: #151515;
+    }
+    &__user-data {
+        font-family: Open Sans;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 12px;
+        line-height: 16px;
+        /* C1/A */
+        color: #151515;
+    }
+}

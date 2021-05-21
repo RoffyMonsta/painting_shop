@@ -1,0 +1,724 @@
+{
+  "paintings": [
+    {
+      "id": 1,
+      "title": "Mona Lisa",
+      "author": "Leonardo Da Vinci",
+      "url": "https://media.timeout.com/images/103166731/750/422/image.jpg",
+      "year": 1503,
+      "price": 4000,
+      "rank": 1,
+      "views": 1000,
+      "sales": 200,
+      "available": true,
+      "basketCount": 1
+    },
+    {
+      "id": 2,
+      "title": "Girl with a Pearl Earring",
+      "author": "Johannes Vermeer",
+      "url": "https://media.timeout.com/images/103166735/750/422/image.jpg",
+      "year": 1503,
+      "price": 1233,
+      "rank": 2,
+      "views": 5151,
+      "sales": 50,
+      "available": true,
+      "basketCount": 1
+    },
+    {
+      "id": 3,
+      "title": "The Birth of Venus",
+      "author": "Sandro Botticelli",
+      "url": "https://media.timeout.com/images/103166737/750/422/image.jpg",
+      "year": 1486,
+      "price": 7674,
+      "rank": 3,
+      "views": 5251,
+      "sales": 13,
+      "available": true,
+      "basketCount": 1
+    },
+    {
+      "id": 4,
+      "title": "The Starry Night",
+      "author": "Vincent van Gogh",
+      "url": "https://media.timeout.com/images/103166739/750/422/image.jpg",
+      "year": 1889,
+      "price": 2000,
+      "rank": 4,
+      "views": 13221,
+      "sales": 51,
+      "available": true,
+      "basketCount": 1
+    },
+    {
+      "id": 5,
+      "title": "Arrangement in Grey and Black",
+      "author": "James Abbott McNeill Whistler",
+      "url": "https://media.timeout.com/images/103166741/750/422/image.jpg",
+      "year": 1871,
+      "price": 1233,
+      "rank": 5,
+      "views": 3221,
+      "sales": 76,
+      "available": true,
+      "basketCount": 1
+    },
+    {
+      "id": 6,
+      "title": "The Kiss",
+      "author": "Gustav Klimt",
+      "url": "https://media.timeout.com/images/103166743/750/422/image.jpg",
+      "year": 1908,
+      "price": 3213,
+      "rank": 6,
+      "views": 3221,
+      "sales": 123,
+      "available": true,
+      "basketCount": 1
+    }
+  ],
+  "reviews": [
+    {
+      "id": 1,
+      "name": "Anton",
+      "email": "anton.lomovatskyi@gmail.com",
+      "score": 3,
+      "comment": "Great painting",
+      "productId": 1
+    },
+    {
+      "id": 2,
+      "email": "antsh.suzylee@gmail.com",
+      "name": "Hello",
+      "score": 3,
+      "comment": "asdasdasd",
+      "productId": 4
+    },
+    {
+      "id": 3,
+      "email": "sin321@gmail.com",
+      "name": "Hello",
+      "score": 4,
+      "comment": "123",
+      "productId": 1
+    },
+    {
+      "id": 4,
+      "email": "ads@asd",
+      "name": "Anton",
+      "score": 3,
+      "comment": "",
+      "productId": 5
+    },
+    {
+      "id": 5,
+      "email": "asd@asd",
+      "name": "Hello",
+      "score": 4,
+      "comment": "21321",
+      "productId": 4
+    },
+    {
+      "id": 6,
+      "email": "asdads@asd",
+      "name": "Anton",
+      "score": 3,
+      "comment": "13",
+      "productId": 4
+    },
+    {
+      "id": 7,
+      "email": "213@2123",
+      "name": "Anton",
+      "score": 3,
+      "comment": "",
+      "productId": 3
+    },
+    {
+      "id": 8,
+      "email": "123@213",
+      "name": "ads",
+      "score": 3,
+      "comment": "123",
+      "productId": 3
+    },
+    {
+      "id": 9,
+      "email": "213@asd",
+      "name": "Anton",
+      "score": 3,
+      "comment": "123123",
+      "productId": 5
+    },
+    {
+      "id": 10,
+      "email": "asd@gmaads.asd",
+      "name": "213231",
+      "score": 3,
+      "comment": "231",
+      "productId": 4
+    },
+    {
+      "id": 11,
+      "email": "132132@asd",
+      "name": "asdads",
+      "score": 2,
+      "comment": "asdads",
+      "productId": 4
+    },
+    {
+      "id": 12,
+      "email": "anton@gmai.com",
+      "name": "TestUser",
+      "score": 2,
+      "comment": "New comment",
+      "productId": 4
+    },
+    {
+      "id": 13,
+      "email": "anton@gmai.com",
+      "name": "TestUser",
+      "score": 2,
+      "comment": "New comment",
+      "productId": 4
+    },
+    {
+      "id": 14,
+      "email": "anton@gmai.com",
+      "name": "TestUser",
+      "score": 2,
+      "comment": "New comment by test",
+      "productId": 4
+    },
+    {
+      "id": 15,
+      "email": "anton@gmai.com",
+      "name": "TestUser",
+      "score": 2,
+      "comment": "New comment by test",
+      "productId": 4
+    },
+    {
+      "id": 16,
+      "email": "anton@gmai.com",
+      "name": "TestUser",
+      "score": 2,
+      "comment": "New comment by test",
+      "productId": 1
+    },
+    {
+      "id": 17,
+      "email": "anton@gmai.com",
+      "name": "TestUser",
+      "score": 2,
+      "comment": "New comment by test",
+      "productId": 1
+    },
+    {
+      "id": 18,
+      "email": "anton@gmai.com",
+      "name": "TestUser",
+      "score": 2,
+      "comment": "New comment by test",
+      "productId": 1
+    },
+    {
+      "id": 19,
+      "email": "anton@gmai.com",
+      "name": "TestUser",
+      "score": 2,
+      "comment": "New comment by test",
+      "productId": 1
+    },
+    {
+      "id": 20,
+      "email": "anton@gmai.com",
+      "name": "TestUser",
+      "score": 2,
+      "comment": "New comment by test",
+      "productId": 1
+    },
+    {
+      "id": 21,
+      "email": "sined321.00+30@gmail.com",
+      "name": "Lomovatskyi Anton",
+      "score": 2,
+      "comment": "12",
+      "productId": 3
+    },
+    {
+      "id": 22,
+      "email": "antsh.suzylee@gmail.com",
+      "name": "Anton Lomovatskyi",
+      "score": 4,
+      "comment": "123",
+      "productId": 3
+    },
+    {
+      "id": 23,
+      "email": "antsh.suzylee@gmail.com",
+      "name": "Anton Lomovatskyi",
+      "score": 3,
+      "comment": "231",
+      "productId": 3
+    },
+    {
+      "id": 24,
+      "email": "sined321.00+30@gmail.com",
+      "name": "Lomovatskyi Anton",
+      "score": 3,
+      "comment": "213",
+      "productId": 3
+    },
+    {
+      "id": 25,
+      "email": "sined321.00@gmail.com",
+      "name": "Lomovatskyi Anton",
+      "score": 2,
+      "comment": "123",
+      "productId": 2
+    },
+    {
+      "id": 26,
+      "email": "sined321.00@gmail.com",
+      "name": "Lomovatskyi Anton",
+      "score": 3,
+      "comment": "123",
+      "productId": 2
+    },
+    {
+      "id": 27,
+      "email": "sined321.00@gmail.com",
+      "name": "Lomovatskyi Anton",
+      "score": 3,
+      "comment": "123",
+      "productId": 2
+    },
+    {
+      "id": 28,
+      "email": "sined321.00+30@gmail.com",
+      "name": "Lomovatskyi Anton",
+      "score": 4,
+      "comment": "123",
+      "productId": 2
+    },
+    {
+      "id": 29,
+      "email": "anton@gmai.com",
+      "name": "TestUser",
+      "score": 2,
+      "comment": "New comment by test",
+      "productId": 4
+    },
+    {
+      "id": 30,
+      "email": "anton@gmai.com",
+      "name": "TestUser",
+      "score": 2,
+      "comment": "New comment by test",
+      "productId": 4
+    },
+    {
+      "id": 31,
+      "email": "anton@gmai.com",
+      "name": "TestUser",
+      "score": 2,
+      "comment": "New comment by test",
+      "productId": 4
+    },
+    {
+      "id": 32,
+      "email": "anton@gmai.com",
+      "name": "TestUser",
+      "score": 2,
+      "comment": "New comment by test",
+      "productId": 4
+    },
+    {
+      "id": 33,
+      "email": "anton@gmai.com",
+      "name": "TestUser",
+      "score": 2,
+      "comment": "New test",
+      "productId": 4
+    },
+    {
+      "id": 34,
+      "email": "anton@gmai.com",
+      "name": "TestUser",
+      "score": 2,
+      "comment": "New test",
+      "productId": 4
+    },
+    {
+      "id": 35,
+      "email": "anton@gmai.com",
+      "name": "TestUser",
+      "score": 2,
+      "comment": "New test",
+      "productId": 1
+    },
+    {
+      "id": 36,
+      "email": "sined321.00@gmail.com",
+      "name": "Anton",
+      "score": 3,
+      "comment": "New Review",
+      "productId": 3
+    },
+    {
+      "id": 37,
+      "email": "anton@gmai.com",
+      "name": "TestUser",
+      "score": 2,
+      "comment": "New test",
+      "productId": 1
+    },
+    {
+      "id": 38,
+      "email": "test@test.com",
+      "name": "Test test",
+      "score": 2,
+      "comment": "asdfas",
+      "productId": 4
+    },
+    {
+      "id": 39,
+      "email": "xxx@xxx.com",
+      "name": "XXX",
+      "score": 2,
+      "comment": "xxx",
+      "productId": 4
+    },
+    {
+      "id": 40,
+      "email": "anton@gmai.com",
+      "name": "TestUser",
+      "score": 2,
+      "comment": "New test",
+      "productId": 1
+    },
+    {
+      "id": 41,
+      "email": "anton@gmai.com",
+      "name": "TestUser",
+      "score": 2,
+      "comment": "New test",
+      "productId": 1
+    },
+    {
+      "id": 42,
+      "email": "anton@gmai.com",
+      "name": "TestUser",
+      "score": 2,
+      "comment": "New test",
+      "productId": 1
+    },
+    {
+      "id": 43,
+      "email": "anton@gmai.com",
+      "name": "TestUser",
+      "score": 2,
+      "comment": "New test",
+      "productId": 1
+    },
+    {
+      "id": 44,
+      "email": "anton@gmai.com",
+      "name": "TestUser",
+      "score": 2,
+      "comment": "New test",
+      "productId": 1
+    }
+  ],
+  "categories": [
+    {
+      "id": 1,
+      "title": "Category menu",
+      "navs": [
+        "Bakery",
+        "Fruit and vegetables",
+        "Meat and fish",
+        "Drinks",
+        "Kitchen"
+      ],
+      "button": "More categories"
+    },
+    {
+      "id": 2,
+      "title": "Bestsellers",
+      "navs": [
+        "Carrots",
+        "Tomatoes",
+        "Potatoes",
+        "Chicken",
+        "Pork"
+      ],
+      "button": "More bestsellers"
+    },
+    {
+      "id": 3,
+      "title": "Most viewed",
+      "navs": [
+        "Kitchen",
+        "Meat and fish",
+        "Special nutrition",
+        "Pharmacy",
+        "Baby"
+      ],
+      "button": "More most viewed"
+    },
+    {
+      "id": 4,
+      "title": "Top-Ranking",
+      "navs": [
+        "Popular",
+        "Ranked",
+        "Et cetera"
+      ],
+      "button": "More top-ranking"
+    }
+  ],
+  "blogs": [
+    {
+      "id": 1,
+      "title": "Headings that are large are cool",
+      "date": "22.6.2020",
+      "author": "Admin",
+      "tags": [
+        "Food",
+        "Recepies",
+        "Fresh",
+        "Vegetable"
+      ],
+      "img": "https://images.immediate.co.uk/production/volatile/sites/30/2020/08/chorizo-mozarella-gnocchi-bake-cropped-9ab73a3.jpg?quality=90&resize=700%2C636",
+      "category": "Dinner",
+      "text": ""
+    },
+    {
+      "id": 2,
+      "title": "Headings that are large are cool",
+      "date": "22.6.2020",
+      "author": "Admin",
+      "tags": [
+        "Garlic",
+        "Recepies",
+        "Apples",
+        "Vegetable"
+      ],
+      "img": "https://naurok-test2.nyc3.digitaloceanspaces.com/971759/images/499836_1615995431.jpg",
+      "category": "Breakfast",
+      "text": ""
+    },
+    {
+      "id": 3,
+      "title": "Headings that are large are cool",
+      "date": "22.6.2020",
+      "author": "Admin",
+      "tags": [
+        "Garlic",
+        "Recepies",
+        "Apples",
+        "Vegetable"
+      ],
+      "img": "https://upload.wikimedia.org/wikipedia/commons/6/6d/Good_Food_Display_-_NCI_Visuals_Online.jpg",
+      "category": "Breakfast",
+      "text": ""
+    },
+    {
+      "id": 4,
+      "title": "Headings that are large are cool",
+      "date": "22.6.2020",
+      "author": "Admin",
+      "tags": [
+        "Garlic",
+        "Recepies",
+        "Apples",
+        "Vegetable"
+      ],
+      "img": "https://eatforum.org/content/uploads/2018/05/table_with_food_top_view_900x700.jpg",
+      "category": "Breakfast",
+      "text": ""
+    },
+    {
+      "id": 5,
+      "title": "Headings that are large are cool",
+      "date": "22.6.2020",
+      "author": "Admin",
+      "tags": [
+        "Garlic",
+        "Recepies",
+        "Apples",
+        "Vegetable"
+      ],
+      "img": "https://images.unsplash.com/photo-1606787366850-de6330128bfc?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8Mjd8fHxlbnwwfHx8fA%3D%3D&w=1000&q=80",
+      "category": "Breakfast",
+      "text": ""
+    },
+    {
+      "id": 6,
+      "title": "Headings that are large are cool",
+      "date": "22.6.2020",
+      "author": "Admin",
+      "tags": [
+        "Garlic",
+        "Recepies",
+        "Apples",
+        "Vegetable"
+      ],
+      "img": "https://scx2.b-cdn.net/gfx/news/hires/2016/howcuttingdo.jpg",
+      "category": "Breakfast",
+      "text": ""
+    },
+    {
+      "id": 7,
+      "title": "Headings that are large are cool",
+      "date": "22.6.2020",
+      "author": "Admin",
+      "tags": [
+        "Garlic",
+        "Recepies",
+        "Apples",
+        "Vegetable"
+      ],
+      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRUFm6Kouwy_CSRtF6pQt0b9Xfjym_B-uwXSQ&usqp=CAU",
+      "category": "Breakfast",
+      "text": ""
+    },
+    {
+      "id": 8,
+      "title": "Headings that are large are cool",
+      "date": "22.6.2020",
+      "author": "Admin",
+      "tags": [
+        "Garlic",
+        "Recepies",
+        "Apples",
+        "Vegetable"
+      ],
+      "img": "https://media.self.com/photos/5f189b76c58e27c99fbef9e3/1:1/w_768,c_limit/blackberry-vanilla-french-toast.jpg",
+      "category": "Breakfast",
+      "text": ""
+    },
+    {
+      "id": 9,
+      "title": "Headings that are large are cool",
+      "date": "22.6.2020",
+      "author": "Admin",
+      "tags": [
+        "Garlic",
+        "Recepies",
+        "Apples",
+        "Vegetable"
+      ],
+      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSNTRTI-dbyZY3Evtl7CPRAAOTt93UyxoX-ZQ&usqp=CAU",
+      "category": "Breakfast",
+      "text": ""
+    },
+    {
+      "id": 10,
+      "title": "Headings that are large are cool",
+      "date": "22.6.2020",
+      "author": "Admin",
+      "tags": [
+        "Garlic",
+        "Recepies",
+        "Apples",
+        "Vegetable"
+      ],
+      "img": "https://asset1.cxnmarksandspencer.com/is/image/mands/010421_foodslp_update?wid=900&qlt=70&fmt=pjpeg",
+      "category": "Breakfast",
+      "text": ""
+    }
+  ],
+  "comments": [
+    {
+      "blogId": 1,
+      "name": "Author",
+      "email": "sined321.00@gmail.com",
+      "save": true,
+      "comment": "Hi everyone,  we have been working hard with the team bringing a new articles. It has passed a few months till we released it in case of traveling and shooting, hopefully you’ll love it.",
+      "date": "2021-05-16T22:13:20.310Z",
+      "answers": [
+        {
+          "id": 1,
+          "blogId": 1,
+          "name": "User",
+          "email": "sined321.00@gmail.com",
+          "save": true,
+          "comment": "Don’t worry about that, we are happy to read a new stories. The time we had to wait was crazy, but the results are awesome! You did an epic job. Now I just need to a buy one.",
+          "date": "2021-05-16T22:14:07.528Z"
+        },
+        {
+          "id": 2,
+          "blogId": 1,
+          "name": "Anton",
+          "email": "sined321.00@gmail.com",
+          "save": true,
+          "comment": "Hello!!!!",
+          "date": "2021-05-17T14:58:30.346Z"
+        },
+        {
+          "id": 3,
+          "blogId": 1,
+          "name": "E2E",
+          "email": "e2e@gmail.com",
+          "save": true,
+          "comment": "Test reply",
+          "date": "2021-05-18T10:32:52.101Z"
+        },
+        {
+          "id": 4,
+          "blogId": 1,
+          "name": "E2E",
+          "email": "e2e@gmail.com",
+          "save": true,
+          "comment": "Test reply",
+          "date": "2021-05-19T12:46:02.525Z"
+        },
+        {
+          "id": 5,
+          "blogId": 1,
+          "name": "E2E",
+          "email": "e2e@gmail.com",
+          "save": true,
+          "comment": "Test reply",
+          "date": "2021-05-21T07:50:39.386Z"
+        }
+      ],
+      "id": 1
+    },
+    {
+      "id": 2,
+      "blogId": 1,
+      "name": "E2E",
+      "email": "e2e@gmail.com",
+      "save": true,
+      "comment": "Test comment",
+      "date": "2021-05-18T11:00:13.536Z",
+      "answers": []
+    },
+    {
+      "id": 3,
+      "blogId": 1,
+      "name": "E2E",
+      "email": "e2e@gmail.com",
+      "save": true,
+      "comment": "Test comment",
+      "date": "2021-05-19T12:45:59.276Z",
+      "answers": []
+    },
+    {
+      "id": 4,
+      "blogId": 1,
+      "name": "E2E",
+      "email": "e2e@gmail.com",
+      "save": true,
+      "comment": "Test comment",
+      "date": "2021-05-21T07:50:36.204Z",
+      "answers": []
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+<div class="page-wrapper">
+    <div class="wrapper">
+        <section class="top-header" fxLayout="row" fxLayoutAlign="space-between center" fxLayout.lt-md="column" fxLayoutGap.lt-md="10px">
+            <mat-list class="top-header__navs" fxLayout="row" fxLayoutAlign="space-between center" fxLayoutGap="33px" fxLayout.lt-sm="column" fxLayoutGap.lt-sm="6px">
+                <mat-list-item fxLayoutAlign.lt-sm="center center"><a class="top-header__link" href="#">Chat with us</a></mat-list-item>
+                <mat-list-item class="top-header__phones" fxLayout="column" fxLayoutAlign="center center">
+                    <div class="top-header__single-phone">
+                        {{'0991234567' | phone }}
+                    </div>
+                </mat-list-item>
+                <mat-list-item>info@freshnesecom.com</mat-list-item>
+            </mat-list>
+            <mat-list class="top-header__navs right" fxLayout="row" fxLayoutAlign="space-between center" fxLayout.lt-sm="column" fxLayoutGap.lt-sm="6px">
+                <mat-list-item class="top-header__list-item" fxFlex="33%" fxLayoutAlign="end center" fxLayoutAlign.lt-sm="center center"><a class="top-header__link" routerLinkActive="active" [routerLink]="['/blog']">Blog</a> </mat-list-item>
+                <mat-list-item class="top-header__list-item" fxFlex="33%" fxLayoutAlign="end center" fxLayoutAlign.lt-sm="center center"><a class="top-header__link" routerLinkActive="active" [routerLink]="['/about']">About Us</a> </mat-list-item>
+                <mat-list-item class="top-header__list-item" fxFlex="33%" fxLayoutAlign="end center" fxLayoutAlign.lt-sm="center center"><a class="top-header__link" routerLinkActive="active" [routerLink]="['/careers']">Careers</a> </mat-list-item>
+            </mat-list>
+        </section>
+        <hr>
+        <app-search></app-search>
+
+    </div>
+</div>
+<app-header-menu></app-header-menu>

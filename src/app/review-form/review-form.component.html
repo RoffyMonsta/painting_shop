@@ -1,0 +1,39 @@
+<div class="wrapper" fxLayout="column" fxLayoutAlign="space-between center">
+
+    <form class="review-form" [formGroup]="form" (ngSubmit)="submit($event)" [@submitForm]="formState">
+        <h2>Add your review!</h2>
+        <p>
+            <mat-form-field appearance="fill">
+                <mat-label>Enter your name</mat-label>
+                <input matInput #name placeholder="Name Surname" formControlName="name" required>
+                <mat-hint align="end">{{name.value?.length || 0}}/20</mat-hint>
+                <mat-error *ngIf="this.form.get('name')?.invalid && this.form.get('name')?.touched">{{getNameErrorMessage()}}</mat-error>
+            </mat-form-field>
+        </p>
+        <p>
+            <mat-form-field appearance="fill">
+                <mat-label>Enter your email</mat-label>
+                <input matInput placeholder="pat@example.com" formControlName="email" required>
+                <mat-error *ngIf="this.form.get('email')?.invalid && this.form.get('email')?.touched">{{getEmailErrorMessage()}}</mat-error>
+            </mat-form-field>
+        </p>
+        <p>
+            <mat-form-field>
+                <mat-label>Your score is {{scoreValue.value}}</mat-label>
+                <input #scoreValue type="number" formControlName="score" matInput required hidden>
+                <mat-slider [value]="scoreValue.value" [max]="5" [min]="1" [step]="1" [thumbLabel]="true" (change)="this.form.get('score')?.setValue($event.value)"></mat-slider>
+                <mat-error *ngIf="this.form.get('score')?.invalid && this.form.get('score')?.touched">{{getScoreErrorMessage()}}</mat-error>
+            </mat-form-field>
+        </p>
+        <p>
+            <mat-form-field appearance="fill">
+                <mat-label>Write down your comment</mat-label>
+                <input matInput #comment placeholder="Your opinion" formControlName="comment">
+                <mat-hint align="end">{{comment.value?.length || 0}}/1000</mat-hint>
+                <mat-error *ngIf="this.form.get('comment')?.invalid && this.form.get('comment')?.touched">{{getCommentErrorMessage()}}</mat-error>
+            </mat-form-field>
+        </p>
+
+        <button class="review-form__button" mat-raised-button type="submit" [disabled]="form.invalid || form.pending">Send your form</button>
+    </form>
+</div>

@@ -1,0 +1,16 @@
+.review-form {
+    box-shadow: 0px 2px 1px -1px rgb(0 0 0 / 20%), 0px 1px 1px 0px rgb(0 0 0 / 14%), 0px 1px 3px 0px rgb(0 0 0 / 12%);
+    padding: 5%;
+    &__button {
+        width: 179px;
+        height: 48px;
+        background: #F5F5F5;
+        border-radius: 12px;
+        font-family: 'Poppins';
+        font-style: normal;
+        font-weight: bold;
+        font-size: 15px;
+        line-height: 22px;
+        color: #151515;
+    }
+}

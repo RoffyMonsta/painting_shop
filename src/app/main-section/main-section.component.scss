@@ -1,0 +1,40 @@
+//main category bonus style
+.paintings-block {
+    min-height: 460px;
+    &__painting {
+        margin-top: 10px;
+    }
+}
+
+hr {
+    max-width: 1170px;
+    opacity: 0.05;
+    border: 1px solid #151515;
+}
+
+.headline-text {
+    width: 100%;
+    margin-top: 69px;
+    margin-bottom: 40px;
+    &__left-text {
+        font-family: Poppins;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 27px;
+        color: #151515;
+    }
+    &__read-more-button {
+        font-family: Poppins;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 15px;
+        line-height: 22px;
+        color: #151515;
+        min-width: 98px;
+        min-height: 35px;
+        & mat-icon {
+            color: #6A983C;
+        }
+    }
+}

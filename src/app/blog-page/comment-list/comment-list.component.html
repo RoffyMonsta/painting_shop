@@ -1,0 +1,17 @@
+<div class="title">
+    Comments
+</div>
+<ng-container *ngIf="comments$ | async as comments; else loadingCarousel">
+    <div class="no-comments" *ngIf="!comments.length">Currently no comments</div>
+    <div class="comment" *ngFor="let comment of comments" fxLayout="column" fxLayoutAlign="start end">
+        <app-comment [comment]="comment"></app-comment>
+        <ng-container *ngIf="comment.answers">
+            <div class="answer" *ngFor="let answer of comment.answers">
+                <app-comment [comment]="answer" [answer]="true"></app-comment>
+            </div>
+        </ng-container>
+    </div>
+</ng-container>
+<ng-template #loadingCarousel>
+    <mat-spinner></mat-spinner>
+</ng-template>

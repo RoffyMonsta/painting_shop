@@ -1,0 +1,251 @@
+    .list-page {
+        height: 100%;
+    }
+    
+    .allpaintings {
+        &__painting {
+            margin-top: 10px;
+        }
+    }
+    
+    .current-route {
+        margin-top: 15px;
+        margin-bottom: 15px;
+        &__homepage {
+            font-family: Open Sans;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 12px;
+            line-height: 16px;
+            color: #A9A9A9;
+        }
+        &__category {
+            font-family: Open Sans;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 12px;
+            line-height: 16px;
+            color: #151515;
+        }
+    }
+    
+    .title-name {
+        &__route-name {
+            font-family: Poppins;
+            font-style: normal;
+            font-weight: 600;
+            font-size: 32px;
+            line-height: 48px;
+            color: #151515;
+        }
+        &__grid {
+            font-family: Open Sans;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 12px;
+            line-height: 16px;
+            /* C1/A */
+            color: #151515;
+        }
+        &__grid-icon {
+            color: #A9A9A9;
+            &.active {
+                color: #6A983C;
+            }
+        }
+        &__list {
+            font-family: Open Sans;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 12px;
+            line-height: 16px;
+            color: #A9A9A9;
+        }
+        &__list-icon {
+            color: #A9A9A9;
+            &.active {
+                color: #6A983C;
+            }
+        }
+        &__product {
+            font-family: Open Sans;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 12px;
+            line-height: 16px;
+            color: #A9A9A9;
+        }
+        &__count {
+            min-width: 32px;
+            min-height: 18px;
+            background: #F4F8EC;
+            border-radius: 12px;
+            font-family: Poppins;
+            font-style: normal;
+            font-weight: 600;
+            font-size: 12px;
+            line-height: 18px;
+            color: #6A983C;
+            text-align: center;
+        }
+    }
+    
+    .applied-filters {
+        margin-top: 8px;
+        margin-bottom: 8px;
+        padding-top: 16px;
+        padding-bottom: 16px;
+        &__radio-group {
+            background: #F9F9F9;
+            /* C1/D */
+            border: 1px solid #D1D1D1;
+            box-sizing: border-box;
+            border-radius: 12px;
+            min-width: 236px;
+            min-height: 42px;
+        }
+        &__radio-button-text {
+            font-family: Open Sans;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 14px;
+            line-height: 19px;
+            color: #151515;
+        }
+        &__checkbox {
+            background: #F9F9F9;
+            /* C1/D */
+            border: 1px solid #D1D1D1;
+            box-sizing: border-box;
+            border-radius: 12px;
+            min-width: 151px;
+            padding: 11px;
+            min-height: 42px;
+        }
+        &__checkbox.select {
+            min-width: 235px;
+        }
+        &__checkbox-text {
+            font-family: Open Sans;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 14px;
+            line-height: 19px;
+            color: #151515;
+        }
+        &__nbm {
+            border: 1px solid #EBEBEB;
+            box-sizing: border-box;
+            border-radius: 12px;
+            font-family: Poppins;
+            font-style: normal;
+            font-weight: 600;
+            font-size: 12px;
+            line-height: 18px;
+            color: #151515;
+            margin-left: 10px;
+            padding: 0px 8px;
+        }
+        &__verticalLine {
+            border: 1px solid #D1D1D1;
+            transform: rotate(90deg);
+            width: 20px;
+            height: 0px;
+            margin-left: 8px;
+        }
+        &__checkbox-select-div {
+            min-width: 60px;
+            font-family: Poppins;
+            font-style: normal;
+            font-weight: 600;
+            font-size: 12px;
+            line-height: 18px;
+            color: #151515;
+        }
+    }
+    
+    .paginator {
+        margin-top: 80px;
+        &__pages {
+            font-family: Open Sans;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 12px;
+            line-height: 16px;
+            color: #151515;
+        }
+        &__page {
+            font-family: Open Sans;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 12px;
+            line-height: 16px;
+            color: #A9A9A9;
+        }
+        &__selected-page {
+            font-family: Open Sans;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 12px;
+            line-height: 16px;
+            color: #6A983C;
+        }
+        &__show-more {
+            background: #6A983C;
+            border: 2px solid #46760A;
+            box-sizing: border-box;
+            border-radius: 12px;
+            min-width: 214px;
+            min-height: 47px;
+            font-family: Poppins;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 15px;
+            line-height: 22px;
+            color: #FFFFFF;
+        }
+        &__icon {
+            color: #fff;
+        }
+        &__counter {
+            background: #F4F8EC;
+            border-radius: 12px;
+            padding: 0px 8px;
+            color: #6A983C;
+            font-family: Poppins;
+            font-style: normal;
+            font-weight: 600;
+            font-size: 12px;
+            line-height: 18px;
+        }
+        &__count {
+            font-family: Open Sans;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 12px;
+            line-height: 16px;
+            color: #A9A9A9;
+        }
+    }
+    
+    //checkbox style
+     ::ng-deep .mat-checkbox-checked.mat-accent .mat-checkbox-ripple .mat-ripple-element {
+        opacity: 0.03 !important;
+        background-color: #6A983C!important;
+    }
+    
+     ::ng-deep .mat-checkbox-checked.mat-accent .mat-checkbox-background,
+    .mat-checkbox-indeterminate.mat-accent .mat-checkbox-background {
+        background-color: #6A983C;
+    }
+    
+    //radio-button styles
+     ::ng-deep .mat-radio-checked {
+        .mat-radio-outer-circle {
+            background: #151515 !important;
+            border-color: #151515 !important;
+        }
+        .mat-radio-inner-circle {
+            background: #FFF !important;
+        }
+    }

@@ -1,0 +1,48 @@
+.comment {
+    background: linear-gradient( rgba(255, 255, 255, 0.6), rgba(0, 0, 0, 0.3));
+    padding: 16px;
+    /* C1/D */
+    border-left: 5px solid rgb(81, 81, 253);
+    border-right: 5px solid rgb(81, 81, 253);
+    min-width: 100%;
+    min-height: 172px;
+    margin-bottom: 24px;
+    &__author-chip {
+        font-family: Poppins;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 12px;
+        line-height: 18px;
+        color: #151515;
+    }
+    &__chip-list {
+        margin-left: 6px;
+    }
+    &__chip {
+        background: #F4F8EC;
+        font-family: Poppins;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 12px;
+        line-height: 18px;
+        color: #6A983C;
+    }
+    &__date {
+        font-family: Open Sans;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 12px;
+        line-height: 16px;
+        color: #151515;
+    }
+    &__text {
+        min-width: 100%;
+        word-wrap: break-word;
+        font-family: Open Sans;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 19px;
+        color: #151515;
+    }
+}

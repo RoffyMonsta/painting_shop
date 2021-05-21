@@ -1,0 +1,9 @@
+<div class="page-wrapper">
+    <div class="wrapper">
+        <!-- <p class="basket-content empty" *ngIf="paints.length">Your basket is empty</p> -->
+        <div class="basket-content available" fxLayout="row" fxLayoutAlign="space-around start" fxLayoutGap="32px" fxLayout.lt-md="column-reverse">
+            <app-billing fxFlex="60%" fxFlex.lt-md="100%"></app-billing>
+            <app-order fxFlex></app-order>
+        </div>
+    </div>
+</div>

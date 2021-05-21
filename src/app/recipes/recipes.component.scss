@@ -1,0 +1,48 @@
+.recipe {
+    min-width: 420px;
+    min-height: 280px;
+    &__text-content {
+        margin-left: 33px;
+    }
+    &__banner {
+        font-family: Poppins;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 12px;
+        line-height: 18px;
+        color: #6A983C;
+    }
+    &__heading {
+        font-family: Poppins;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 22px;
+        line-height: 33px;
+        color: #151515;
+    }
+    &__button {
+        margin-left: 33px;
+        min-width: 163px;
+        min-height: 47px;
+        border: 2px solid #92C064;
+        box-sizing: border-box;
+        border-radius: 12px;
+        background: none;
+        font-family: Poppins;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 15px;
+        line-height: 22px;
+        color: #151515;
+    }
+    &__icon {
+        color: #6A983C;
+    }
+}
+
+@media screen and (max-width: 420px) {
+    .recipe {
+        min-width: 320px;
+        min-height: 240px;
+    }
+}

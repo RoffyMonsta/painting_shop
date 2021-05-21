@@ -1,0 +1,206 @@
+.current-route {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    &__homepage {
+        font-family: Open Sans;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 12px;
+        line-height: 16px;
+        color: #A9A9A9;
+    }
+    &__category {
+        font-family: Open Sans;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 12px;
+        line-height: 16px;
+        color: #151515;
+    }
+}
+
+.blog {
+    padding-top: 48px;
+    &__header {
+        width: 100%;
+        min-height: 480px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        padding-bottom: 32px;
+        margin-bottom: 48px;
+    }
+    &__heading {
+        min-height: 135px;
+        max-width: 549px;
+        word-wrap: break-word;
+        font-family: Poppins;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 32px;
+        line-height: 140%;
+        /* or 45px */
+        /* C1/J */
+        color: #FFFFFF;
+    }
+    &__date-author {
+        max-width: 168px;
+    }
+    &__info-author {
+        font-family: Poppins;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 12px;
+        line-height: 18px;
+        /* identical to box height */
+        /* C1/J */
+        color: #FFFFFF;
+        &.grey {
+            color: #A9A9A9;
+        }
+        &.underline {
+            text-decoration: underline;
+        }
+    }
+    &__content {
+        width: 100%;
+        padding-top: 48px;
+    }
+    &__tags {
+        max-width: 169px;
+    }
+    &__text-content {
+        max-width: 569px;
+        word-wrap: break-word;
+        width: 100%;
+    }
+    &__tag {
+        font-family: Poppins;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 27px;
+        /* identical to box height */
+        /* C1/A */
+        color: #151515;
+        margin-bottom: 16px;
+    }
+    &__chip {
+        background: #F4F8EC;
+        border-radius: 12px;
+        font-family: Poppins;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 12px;
+        line-height: 18px;
+        /* identical to box height */
+        /* C2/A */
+        color: #6A983C;
+    }
+    &__back {
+        min-height: 35px;
+        min-width: 117px;
+        margin-top: 54px;
+        font-family: Poppins;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 15px;
+        line-height: 22px;
+        /* identical to box height */
+        /* C1/A */
+        color: #151515;
+    }
+    &__common-text {
+        font-family: Open Sans;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 17px;
+        line-height: 23px;
+        /* C1/A */
+        color: #151515;
+        &.underline {
+            text-decoration: underline;
+        }
+    }
+    &__title-text {
+        margin-top: 48px;
+        margin-bottom: 12px;
+        font-family: Poppins;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 27px;
+        /* identical to box height */
+        /* C1/A */
+        color: #151515;
+    }
+    &__share {
+        padding-top: 48px;
+        padding-bottom: 48px;
+    }
+    &__share-text {
+        font-family: Poppins;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 27px;
+        /* identical to box height */
+        /* C1/A */
+        color: #151515;
+        margin-right: 16px;
+    }
+    &__share-chip {
+        background: #F5F5F5;
+        border-radius: 12px;
+        font-family: Poppins;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 15px;
+        line-height: 22px;
+        /* identical to box height */
+        /* C1/A */
+        color: #151515;
+    }
+    &__share-icon {
+        margin-right: 6px;
+    }
+    &__add-blogs {
+        padding-bottom: 48px;
+    }
+    & app-comment-form {
+        min-width: 100%;
+    }
+    & app-comment-list {
+        min-width: 100%;
+    }
+}
+
+::ng-deep .blog__back.mat-button {
+    padding: 0 !important;
+}
+
+.headline-text {
+    width: 100%;
+    margin-top: 69px;
+    margin-bottom: 40px;
+    &__left-text {
+        font-family: Poppins;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 27px;
+        color: #151515;
+    }
+    &__read-more-button {
+        font-family: Poppins;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 15px;
+        line-height: 22px;
+        color: #151515;
+        min-width: 98px;
+        min-height: 35px;
+        & mat-icon {
+            color: #6A983C;
+        }
+    }
+}

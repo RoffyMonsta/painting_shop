@@ -1,0 +1,90 @@
+<div class="filter-block" fxLayout="column" fxLayoutAlign="space-between start" fxLayoutGap="50px">
+    <div class="filter" fxLayout="column" fxLayoutAlign="space-between start" fxLayoutGap="12px">
+        <div class="filter__title">Categories</div>
+        <div class="filter__element" fxLayout="row" fxLayoutAlign="space-between center">
+            <span class="filter__category-name">Category name</span>
+            <span class="filter__category-count">320</span>
+        </div>
+        <div class="filter__element" fxLayout="row" fxLayoutAlign="space-between center">
+            <span class="filter__category-name">Category name</span>
+            <span class="filter__category-count">112</span>
+        </div>
+        <div class="filter__element" fxLayout="row" fxLayoutAlign="space-between center">
+            <span class="filter__category-name">Category name</span>
+            <span class="filter__category-count">32</span>
+        </div>
+        <div class="filter__element" fxLayout="row" fxLayoutAlign="space-between center">
+            <span class="filter__category-name">Category name</span>
+            <span class="filter__category-count">48</span>
+        </div>
+    </div>
+    <div class="filter" fxLayout="column" fxLayoutAlign="space-between start">
+        <div class="filter__title">Brands</div>
+        <mat-checkbox><span class="filter__checkbox-text">Filtre by brand name</span></mat-checkbox>
+        <mat-checkbox [checked]="myModel"><span class="filter__checkbox-text">Filtre by brand name</span></mat-checkbox>
+        <mat-checkbox [checked]="myModel"><span class="filter__checkbox-text">Filtre by brand name</span></mat-checkbox>
+        <mat-checkbox><span class="filter__checkbox-text">Filtre by brand name</span></mat-checkbox>
+        <mat-checkbox><span class="filter__checkbox-text">Filtre by brand name</span></mat-checkbox>
+    </div>
+    <div class="filter" fxLayout="column" fxLayoutAlign="space-between start">
+        <div class="filter__title">Rating</div>
+        <mat-checkbox>
+            <mat-icon class="filter__yellow-star">star</mat-icon>
+            <mat-icon class="filter__yellow-star">star</mat-icon>
+            <mat-icon class="filter__yellow-star">star</mat-icon>
+            <mat-icon class="filter__yellow-star">star</mat-icon>
+            <mat-icon class="filter__yellow-star">star</mat-icon>
+        </mat-checkbox>
+        <mat-checkbox>
+            <mat-icon class="filter__yellow-star">star</mat-icon>
+            <mat-icon class="filter__yellow-star">star</mat-icon>
+            <mat-icon class="filter__yellow-star">star</mat-icon>
+            <mat-icon class="filter__yellow-star">star</mat-icon>
+            <mat-icon class="filter__white-star">star_border</mat-icon>
+        </mat-checkbox>
+        <mat-checkbox>
+            <mat-icon class="filter__yellow-star">star</mat-icon>
+            <mat-icon class="filter__yellow-star">star</mat-icon>
+            <mat-icon class="filter__yellow-star">star</mat-icon>
+            <mat-icon class="filter__white-star">star_border</mat-icon>
+            <mat-icon class="filter__white-star">star_border</mat-icon>
+        </mat-checkbox>
+        <mat-checkbox>
+            <mat-icon class="filter__yellow-star">star</mat-icon>
+            <mat-icon class="filter__yellow-star">star</mat-icon>
+            <mat-icon class="filter__white-star">star_border</mat-icon>
+            <mat-icon class="filter__white-star">star_border</mat-icon>
+            <mat-icon class="filter__white-star">star_border</mat-icon>
+        </mat-checkbox>
+        <mat-checkbox>
+            <mat-icon class="filter__yellow-star">star</mat-icon>
+            <mat-icon class="filter__white-star">star_border</mat-icon>
+            <mat-icon class="filter__white-star">star_border</mat-icon>
+            <mat-icon class="filter__white-star">star_border</mat-icon>
+            <mat-icon class="filter__white-star">star_border</mat-icon>
+        </mat-checkbox>
+    </div>
+    <div class="filter" fxLayout="column" fxLayoutAlign="space-between start">
+        <div class="filter__title">Price</div>
+        <ngx-slider class="filter__slider" [(value)]="value" [(highValue)]="highValue" [options]="options"></ngx-slider>
+        <div class="filter__inputs" fxLayout="row" fxLayoutAlign="space-around center" fxLayoutGap="33px">
+            <div class="filter__min-max-inputs" fxLayout="column" fxLayoutAlign="center start">
+                <div class="filter__input-title">
+                    Min
+                </div>
+                <input class="filter__input" matInput placeholder="0">
+            </div>
+            <div class="filter__min-max-inputs" fxLayout="column" fxLayoutAlign="center start">
+                <div class="filter__input-title">
+                    Max
+                </div>
+                <input class="filter__input" matInput type="text" placeholder="000">
+            </div>
+        </div>
+    </div>
+    <div class="filter__buttons" fxLayout="row" fxLayoutAlign="space-between center" fxLayoutGap="34px">
+        <button mat-button class="filter__apply">Apply</button>
+        <button mat-button class="filter__reset">Reset</button>
+    </div>
+
+</div>

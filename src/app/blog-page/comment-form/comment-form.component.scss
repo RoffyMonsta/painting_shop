@@ -1,0 +1,148 @@
+.title {
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 33px;
+    /* identical to box height */
+    /* C1/A */
+    color: #151515;
+    margin-bottom: 12px;
+}
+
+.sign-in {
+    word-wrap: break-word;
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 17px;
+    line-height: 23px;
+    /* C1/A */
+    color: #151515;
+    &.under {
+        text-decoration: underline;
+    }
+    margin-bottom: 16px;
+}
+
+.comment-form {
+    padding-bottom: 48px;
+    &__name-email {
+        min-width: 100%;
+    }
+    &__name {
+        min-width: 45%;
+    }
+    &__email {
+        min-width: 45%;
+    }
+    &__input-title {
+        font-family: Poppins;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 12px;
+        line-height: 18px;
+        color: #151515;
+    }
+    &__input-form-field {
+        width: 100%;
+    }
+    &__checkbox {
+        width: 100%;
+        word-wrap: break-word;
+        background: #F9F9F9;
+        /* C1/D */
+        border: 1px solid #D1D1D1;
+        box-sizing: border-box;
+        border-radius: 12px;
+        padding: 9px 16px;
+        font-family: Open Sans;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 19px;
+        margin-bottom: 8px;
+        color: #151515;
+    }
+    &__comment {
+        margin-top: 16px;
+        width: 100%;
+        min-height: 130px;
+    }
+    &__button {
+        min-width: 228px;
+        min-height: 48px;
+        background: #6A983C;
+        /* C2/B */
+        border: 2px solid #46760A;
+        box-sizing: border-box;
+        border-radius: 12px;
+        font-family: Poppins;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 15px;
+        line-height: 22px;
+        /* identical to box height */
+        /* C1/J */
+        color: #FFFFFF;
+    }
+    &__answer {
+        min-width: 100%;
+    }
+    &__answer-to {
+        min-width: 100%;
+    }
+    &__answer-comment {
+        min-width: 100%;
+    }
+}
+
+//input styles
+::ng-deep .comment-form .mat-form-field-outline-start {
+    border-radius: 12px 0 0 12px !important;
+    min-width: 12px !important;
+    background: #F9F9F9 !important;
+}
+
+::ng-deep .comment-form .mat-form-field-outline-gap {
+    background: #F9F9F9 !important;
+    min-width: 12px !important;
+}
+
+::ng-deep .comment-form .mat-form-field-outline-end {
+    border-radius: 0 12px 12px 0 !important;
+    background: #F9F9F9 !important;
+    min-width: 12px !important;
+}
+
+::ng-deep .comment-form .comment-form__comment .mat-form-field-outline-start {
+    border-radius: 12px 0 0 12px !important;
+    min-width: 12px !important;
+    min-height: 112px !important;
+    background: #F9F9F9 !important;
+}
+
+::ng-deep .comment-form .comment-form__comment .mat-form-field-outline-gap {
+    background: #F9F9F9 !important;
+    min-width: 12px !important;
+    min-height: 112px !important;
+}
+
+::ng-deep .comment-form .comment-form__comment .mat-form-field-outline-end {
+    border-radius: 0 12px 12px 0 !important;
+    background: #F9F9F9 !important;
+    min-width: 12px !important;
+    min-height: 112px !important;
+}
+
+::ng-deep .comment-form .comment-form__comment .mat-form-field-wrapper {
+    min-height: 112px !important;
+}
+
+::ng-deep .comment-form .mat-form-field-infix {
+    margin-bottom: 4px !important;
+}
+
+::ng-deep .comment-form .mat-input-element {
+    margin-left: 10px !important;
+}

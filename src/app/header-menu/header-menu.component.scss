@@ -1,0 +1,18 @@
+// Header nav styles
+.nav-bar {
+    background: #F9F9F9;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    line-height: 22px;
+    color: #151515;
+    padding-bottom: 10px;
+    &__menu-icon {
+        margin-top: 10px;
+        margin-bottom: 10px;
+        color: #6A983C;
+    }
+    &__all-menus {
+        margin-bottom: 10px;
+    }
+}

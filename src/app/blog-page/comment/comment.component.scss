@@ -1,0 +1,76 @@
+.comment {
+    padding: 16px;
+    background: #FFFFFF;
+    /* C1/D */
+    border: 1px solid #D1D1D1;
+    border-radius: 12px;
+    min-width: 100%;
+    min-height: 172px;
+    margin-bottom: 24px;
+    &__author-chip {
+        font-family: Poppins;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 12px;
+        line-height: 18px;
+        color: #151515;
+    }
+    &__chip-list {
+        margin-left: 6px;
+    }
+    &__chip {
+        background: #F4F8EC;
+        font-family: Poppins;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 12px;
+        line-height: 18px;
+        color: #6A983C;
+    }
+    &__date {
+        font-family: Open Sans;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 12px;
+        line-height: 16px;
+        color: #D1D1D1;
+    }
+    &__text {
+        min-width: 100%;
+        word-wrap: break-word;
+        font-family: Open Sans;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 19px;
+        color: #151515;
+    }
+    &__reply-div {
+        width: 100%;
+    }
+    &__reply-btn {
+        min-height: 35px;
+        min-width: 117px;
+        font-family: Poppins;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 15px;
+        line-height: 22px;
+        /* identical to box height */
+        /* C1/A */
+        color: #151515;
+    }
+    &.answer {
+        .comment__chip {
+            font-family: Poppins;
+            font-style: normal;
+            font-weight: 600;
+            font-size: 12px;
+            line-height: 18px;
+            /* identical to box height */
+            /* C1/A */
+            color: #151515;
+            background: #F5F5F5;
+        }
+    }
+}

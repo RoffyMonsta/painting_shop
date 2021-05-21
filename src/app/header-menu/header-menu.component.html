@@ -1,0 +1,19 @@
+<div class="page-wrapper">
+    <section class="nav-bar" fxLayout="column" fxLayoutAlign="space-between center" fxLayoutGap="20px">
+        <div class="nav-bar__menu-switch" fxLayout="row" fxLayoutAlign="center center">
+            <button class="nav-bar__menu-button" mat-button *ngIf="detectWindowSize(0,1279)" (click)="showMenu = !showMenu">
+              Menu
+              <mat-icon class="nav-bar__menu-icon" *ngIf="!showMenu">arrow_downward</mat-icon>
+            <mat-icon class="nav-bar__menu-icon"  *ngIf="showMenu">arrow_upward</mat-icon></button>
+        </div>
+        <div class="all-menus" *ngIf="!detectWindowSize(0,1279) || (detectWindowSize(0,1279) && showMenu)" fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="20px" fxLayout.lt-lg="column" fxLayoutAlign.lt-lg="center center">
+            <div class="one-menu" *ngFor="let p of menuArr">
+                <button mat-button [matMenuTriggerFor]="menu">{{p}}<mat-icon class="nav-bar__menu-icon" >keyboard_arrow_down</mat-icon></button>
+                <mat-menu #menu="matMenu">
+                    <button mat-menu-item (click)="onClick(option)" *ngFor="let option of menuArr">{{option}}</button>
+                </mat-menu>
+            </div>
+        </div>
+    </section>
+
+</div>

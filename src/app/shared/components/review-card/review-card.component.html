@@ -1,0 +1,18 @@
+<div class="review" fxLayout="column" fxLayoutAlign="space-around center" *ngIf="review;else loadingCarousel">
+    <div class="review__content">
+        <p>
+            “ {{review.comment}} “
+        </p>
+        <p class="review__score">
+            Score is {{review.score}} / 5
+        </p>
+    </div>
+    <div class="review__subtitle">
+        <p>By {{review.name}}</p>
+    </div>
+    <div class="review__user"><img src="./../../../../assets/img/user.png" alt="user"></div>
+
+</div>
+<ng-template #loadingCarousel>
+    <mat-spinner></mat-spinner>
+</ng-template>

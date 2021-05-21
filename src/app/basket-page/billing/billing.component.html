@@ -1,0 +1,221 @@
+<div class="billing">
+    <form class="billing__form" [formGroup]="form" (ngSubmit)="submit($event)" fxLayout="column" fxLayoutAlign="space-between start" fxLayoutGap="64px">
+        <div class="step" fxLayout="column">
+            <p class="step__title">Billing info</p>
+            <div fxLayout="row" fxLayoutAlign="space-between center" fxLayout.lt-md="column" fxLayoutAlign.lt-md="space-between start">
+                <span class="step__subtitle">Please enter your billing info</span>
+                <div class="step__subtitle">Step 1 of 5</div>
+            </div>
+            <div class="step__billing-info" fxLayout="row wrap" fxLayoutAlign="space-between center" fxLayout.lt-md="column" fxLayoutAlign.lt-md="space-between start">
+                <div class="step__input-div" fxLayout="column" fxLayoutAlign="space-between start" fxFlex="40%">
+                    <span class="step__input-title">First name</span>
+                    <mat-form-field class="step__input-form-field" appearance="outline">
+
+                        <mat-label>First name</mat-label>
+                        <input matInput #firstname placeholder="First name" formControlName="firstname" required>
+
+                    </mat-form-field>
+                </div>
+                <div class="step__input-div" fxLayout="column" fxLayoutAlign="space-between start" fxFlex="40%">
+                    <span class="step__input-title">Last name</span>
+                    <mat-form-field class="step__input-form-field" appearance="outline">
+                        <mat-label>Last name</mat-label>
+                        <input matInput #lastname placeholder="Last name" formControlName="lastname" required>
+                    </mat-form-field>
+                </div>
+                <div class="step__input-div" fxLayout="column" fxLayoutAlign="space-between start" fxFlex="40%">
+                    <span class="step__input-title">Email address</span>
+                    <mat-form-field class="step__input-form-field" appearance="outline">
+                        <mat-label>Email address</mat-label>
+                        <input matInput #email placeholder="Email address" formControlName="email" required>
+
+                    </mat-form-field>
+                </div>
+                <div class="step__input-div" fxLayout="column" fxLayoutAlign="space-between start" fxFlex="40%">
+                    <span class="step__input-title">Phone number</span>
+                    <mat-form-field class="step__input-form-field" appearance="outline">
+                        <mat-label>Phone number</mat-label>
+                        <input matInput #phone placeholder="Phone number" formControlName="phone" required>
+
+                    </mat-form-field>
+                </div>
+                <div class="step__input-div" fxLayout="column" fxLayoutAlign="space-between start" fxFlex="40%">
+                    <span class="step__input-title">Address</span>
+                    <mat-form-field class="step__input-form-field" appearance="outline">
+                        <mat-label>Address</mat-label>
+                        <input matInput #address placeholder="Address" formControlName="address" required>
+
+                    </mat-form-field>
+                </div>
+                <div class="step__input-div" fxLayout="column" fxLayoutAlign="space-between start" fxFlex="40%">
+                    <span class="step__input-title">Town/City</span>
+                    <mat-form-field class="step__input-form-field" appearance="outline">
+                        <mat-label>Town/City</mat-label>
+                        <input matInput #city placeholder="Town or city" formControlName="city" required>
+
+                    </mat-form-field>
+                </div>
+                <div class="step__input-div" fxLayout="column" fxLayoutAlign="space-between start" fxFlex="40%">
+                    <span class="step__input-title">State/Country</span>
+                    <mat-form-field class="step__input-form-field" appearance="outline">
+                        <mat-label>State/Country</mat-label>
+                        <mat-select #country formControlName="country" placeholder="Choose a state or Country" required>
+                            <mat-option *ngFor="let c of countries" [value]="c">{{c}}</mat-option>
+                        </mat-select>
+
+                    </mat-form-field>
+                </div>
+                <div class="step__input-div" fxLayout="column" fxLayoutAlign="space-between start" fxFlex="40%">
+                    <span class="step__input-title">ZIP/Postal code</span>
+                    <mat-form-field class="step__input-form-field" appearance="outline">
+                        <mat-label>ZIP/Postal code</mat-label>
+                        <input matInput #zip placeholder="Postal code or ZIP" formControlName="zip" required>
+
+                    </mat-form-field>
+                </div>
+
+                <div class="step__checkbox" fxLayout="row" fxLayoutGap="10px">
+                    <mat-checkbox formControlName="differentAddress"></mat-checkbox>
+                    <span class="step__checkbox-text">Ship to a different address?</span>
+                </div>
+            </div>
+        </div>
+        <div class="step">
+            <p class="step__title">Billing method</p>
+            <div fxLayout="row" fxLayoutAlign="space-between center" fxLayout.lt-md="column" fxLayoutAlign.lt-md="space-between start">
+                <span class="step__subtitle">Please enter your billing method</span>
+                <div class="step__subtitle">Step 2 of 5</div>
+            </div>
+            <div class="step__billing-method">
+                <mat-radio-group #billingMethod formControlName="billingMethod" required fxLayout="column" fxLayoutAlign="space-between start">
+                    <div class="step__radio-button" fxLayout="row" fxLayoutAlign="start center">
+                        <mat-radio-button value=" FedEx ">
+                        </mat-radio-button>
+                        <div class="step__radio-content " fxLayout="row " fxLayoutAlign="space-between center">FedEx
+                            <div class="step__additional-price "><span class="step__additional-green ">+32 USD</span> Additional price</div> <img src="../../../assets/img/fedex.png " alt="fedex logo ">
+                        </div>
+                    </div>
+                    <div class="step__radio-button" fxLayout="row" fxLayoutAlign="start center">
+                        <mat-radio-button value=" DHL ">
+                        </mat-radio-button>
+                        <div class="step__radio-content " fxLayout="row " fxLayoutAlign="space-between center">DHL
+                            <div class="step__additional-price "><span class="step__additional-green ">+15 USD</span> Additional price</div> <img src="../../../assets/img/dhl.png " alt="fedex logo ">
+                        </div>
+                    </div>
+                </mat-radio-group>
+
+            </div>
+
+        </div>
+        <div class="step ">
+            <p class="step__title ">Payment method</p>
+            <div fxLayout="row " fxLayoutAlign="space-between center " fxLayout.lt-md="column " fxLayoutAlign.lt-md="space-between start ">
+                <span class="step__subtitle ">Please enter your payment method</span>
+                <div class="step__subtitle ">Step 3 of 5</div>
+            </div>
+            <div class="step__payment-method ">
+                <mat-radio-group #paymentMethod formControlName="paymentMethod" required fxLayout="column " fxLayoutAlign="space-between start ">
+                    <div class="step__radio-button " fxLayout="column " fxLayoutAlign="start center " [ngStyle]="{'backgroundColor': creditCard? '#FFF':'#F9F9F9'}">
+                        <div fxLayout="row " fxLayoutAlign="start center " [ngStyle]="{'width':'100%'}">
+                            <mat-radio-button value="Credit card" (click)="setCardValidators(true)">
+                            </mat-radio-button>
+                            <div class="step__radio-content " fxLayout="row " fxLayoutAlign="space-between center ">
+                                Credit card
+                                <img src="../../../assets/img/visa-master.png " alt="visa logo ">
+                            </div>
+                        </div>
+                        <mat-radio-group formGroupName="creditCard" class="step__credit-info " *ngIf="creditCard" fxLayout="row wrap " fxLayoutAlign="space-between center ">
+                            <div class="step__input-div " fxLayout="column " fxLayoutAlign="space-between start " fxFlex="80% ">
+                                <span class="step__input-title ">Card number</span>
+                                <mat-form-field class="step__input-form-field ">
+                                    <mat-label>Card number</mat-label>
+                                    <input matInput #cardNumber placeholder="Card number" formControlName="cardNumber" [required]="creditCard">
+
+                                </mat-form-field>
+                            </div>
+                            <div class="step__input-div " fxLayout="column " fxLayoutAlign="space-between start " fxFlex="40% ">
+                                <span class="step__input-title ">Card holder</span>
+                                <mat-form-field class="step__input-form-field ">
+                                    <mat-label>Card holder</mat-label>
+                                    <input matInput #cardHolder placeholder="Card holder" formControlName="cardHolder" [required]="creditCard">
+
+                                </mat-form-field>
+                            </div>
+                            <div class="step__input-div " fxLayout="column " fxLayoutAlign="space-between start " fxFlex="20% ">
+                                <span class="step__input-title ">Expiration date</span>
+                                <mat-form-field class="step__input-form-field ">
+                                    <mat-label>Expiration date</mat-label>
+                                    <input matInput #expirationDate placeholder="DD/MM/YY" formControlName="expirationDate" [required]="creditCard">
+
+                                </mat-form-field>
+                            </div>
+                            <div class="step__input-div " fxLayout="column " fxLayoutAlign="space-between start " fxFlex="20% ">
+                                <span class="step__input-title ">CVC</span>
+                                <mat-form-field class="step__input-form-field ">
+                                    <mat-label>CVC</mat-label>
+                                    <input matInput #cvc placeholder="CVC " formControlName="cvc" [required]="creditCard ">
+                                </mat-form-field>
+                            </div>
+                        </mat-radio-group>
+                    </div>
+                    <div class="step__radio-button " fxLayout="row " fxLayoutAlign="start center ">
+                        <mat-radio-button value="PayPal " (click)="setCardValidators(false) ">
+                        </mat-radio-button>
+                        <div class="step__radio-content " fxLayout="row " fxLayoutAlign="space-between center ">FedEx
+                            <img src="../../../assets/img/paypal.png " alt="paypal logo ">
+                        </div>
+                    </div>
+                    <div class="step__radio-button " fxLayout="row " fxLayoutAlign="start center ">
+                        <mat-radio-button value="Bitcoin " (click)="setCardValidators(false) ">
+
+                        </mat-radio-button>
+                        <div class="step__radio-content " fxLayout="row " fxLayoutAlign="space-between center ">Bitcoin
+                            <img src="../../../assets/img/bitcoin.png " alt="bitcoin logo ">
+                        </div>
+                    </div>
+                </mat-radio-group>
+            </div>
+        </div>
+        <div class="step additional ">
+            <p class="step__title ">Additional informations</p>
+            <div fxLayout="row " fxLayoutAlign="space-between center " fxLayout.lt-md="column " fxLayoutAlign.lt-md="space-between start ">
+                <span class="step__subtitle ">Need something else? We will make it for you!</span>
+                <div class="step__subtitle ">Step 4 of 5</div>
+            </div>
+            <div class="step__additional ">
+                <span class="step__input-title">Order notes</span>
+                <mat-form-field class="step__input-form-field" appearance="outline">
+                    <mat-label class="step__order-notes-label ">Need a specific delivery day? Sending a gift? Let's say...</mat-label>
+                    <input class="step__order-input" matInput #notes formControlName="notes">
+
+                </mat-form-field>
+            </div>
+
+        </div>
+
+        <div class="step ">
+            <p class="step__title ">Confirmation</p>
+            <div fxLayout="row " fxLayoutAlign="space-between center " fxLayout.lt-md="column " fxLayoutAlign.lt-md="space-between start ">
+                <span class="step__subtitle ">We are getting to the end. Just few clicks and your order is ready!</span>
+                <div class="step__subtitle ">Step 5 of 5</div>
+            </div>
+            <div class="step__confirmation " fxLayout="column " fxLayoutAlign="space-between start ">
+                <div class="step__checkbox " fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="8px">
+                    <mat-checkbox formControlName="spam"></mat-checkbox>
+                    <span>I agree with sending an Marketing and newsletter emails. No spam, promissed!</span>
+                </div>
+                <div class="step__checkbox " fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="10px">
+                    <mat-checkbox formControlName="terms" required></mat-checkbox>
+                    <span>I agree with our <u>terms and conditions</u> and <u>privacy policy</u></span>
+                </div>
+                <button mat-raised-button class="step__button " type="submit " [disabled]="form.invalid || form.pending ">Complete order</button>
+            </div>
+
+        </div>
+    </form>
+    <div class="safe-data " fxLayout="column " fxLayoutAlign="space-between start ">
+        <img src="./../../../assets//img/safe.png " alt="safe img ">
+        <span class="safe-data__safe-text ">All your data is safe</span>
+        <span class="safe-data__subtext ">We are using the most advanced security to provide you the best experience ever.</span>
+    </div>
+</div>
